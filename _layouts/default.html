@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Design System - Exprima Light Theme */
+        :root {
+            --navy-primary: #1a5f7a;
+            --teal-light: #2d8ba8;
+            --navy-dark: #0d3d52;
+            --teal-accent: #57a6c1;
+            
+            /* Light theme colors */
+            --ivory: #faf9f6;
+            --cream: #f5f3ee;
+            --warm-white: #ffffff;
+            --soft-gray: #e8e6e1;
+            --mid-gray: #9e9b93;
+            --text-dark: #2a2825;
+            --text-body: #4a4643;
+            --text-light: #6b6762;
+            --border-light: #d9d6cf;
+            --gray-100: #F5F5F5;
+            --gray-200: #E0E0E0;
+            --gray-300: #B0B0B0;
+            --gray-400: #808080;
+            --gray-500: #606060;
+            --gray-600: #505050;
+            --gray-700: #383838;
+            --gray-800: #252525;
+            --gray-900: #1A1A1A;
+            --black: #111111;
+            
+            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: var(--black);
+            --bg-secondary: var(--gray-900);
+            --bg-card: var(--gray-800);
+            --bg-card-hover: var(--gray-700);
+            --text-primary: var(--gray-100);
+            --text-secondary: var(--gray-300);
+            --text-muted: var(--gray-400);
+            --border-color: var(--gray-700);
+            --border-subtle: var(--gray-800);
+            --code-bg: var(--gray-900);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        #grain-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-repeat: repeat;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .nav-tagline {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--slate-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-link {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--slate-light);
+        }
+
+        .btn-nav {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            background: var(--slate-primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .btn-nav:hover {
+            background: var(--slate-light);
+        }
+
+        /* Content Area */
+        .site-content {
+            min-height: 60vh;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 100px;
+            background: var(--bg-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--slate-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--slate-light);
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-bottom a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--slate-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 16px;
+            }
+            .nav-link {
+                font-size: 0.75rem;
+            }
+            .btn-nav {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="grain-overlay"></div>
+
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <span class="nav-title">Exprima</span>
+                <span class="nav-tagline">Upstream Risk Translation Applied</span>
+            </a>
+            <div class="nav-links">
+                <a href="/services/" class="nav-link">Services</a>
+                <a href="/platform/" class="nav-link">Platform</a>
+                <a href="/about/" class="nav-link">About</a>
+                <a href="#contact" class="btn-nav">Schedule Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-content">
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Exprima</h3>
+                    <p>
+                        Fractional security executive services for regulated industries, 
+                        applying Upstream Risk Translation methodology with AI-powered tools.
+                    </p>
+                    <p style="margin-top: 16px;">
+                        <strong>Founded by Elliott Mattice</strong><br>
+                        Creator of Upstream Risk Translation
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="/services/#fractional-executive">Fractional Executive</a></li>
+                        <li><a href="/services/#ai-governance">AI Governance</a></li>
+                        <li><a href="/services/#compliance">Compliance Programs</a></li>
+                        <li><a href="/services/#advisory">Strategic Advisory</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about/">About Exprima</a></li>
+                        <li><a href="/platform/">Platform & Tools</a></li>
+                        <li><a href="https://elliottmattice.work" target="_blank">Methodology</a></li>
+                        <li><a href="https://elliottmattice.work/speaking" target="_blank">Speaking</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    <strong>Contact:</strong> 
+                    <a href="/cdn-cgi/l/email-protection#e69d9dc6958f9283c885898b9687889fc8838b878f8ac69b9b">{{ site.company.email }}</a> · 
+                    <a href="tel:+12022624088">{{ site.company.phone }}</a>
+                </p>
+                <p style="margin-top: 12px;">
+                    {{ site.company.address }}
+                </p>
+                <p style="margin-top: 20px; font-size: 0.75rem;">
+                    © {{ 'now' | date: "%Y" }} Exprima. All rights reserved. · 
+                    Methodology by <a href="https://elliottmattice.work" target="_blank">Elliott Mattice</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Generate grain texture
+        (function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = 128;
+            canvas.height = 128;
+            var ctx = canvas.getContext('2d');
+            var imageData = ctx.createImageData(128, 128);
+            
+            for (var i = 0; i < imageData.data.length; i += 4) {
+                var value = Math.random() * 255 | 0;
+                imageData.data[i] = value;
+                imageData.data[i + 1] = value;
+                imageData.data[i + 2] = value;
+                imageData.data[i + 3] = 255;
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+            var overlay = document.getElementById('grain-overlay');
+            if (overlay)

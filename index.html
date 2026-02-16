@@ -1,0 +1,566 @@
+---
+layout: default
+title: Exprima - Upstream Risk Translation Applied
+---
+
+<style>
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 80px;
+        background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .hero-tagline {
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        color: var(--slate-light);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 24px;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        margin-bottom: 40px;
+        max-width: 800px;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary {
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        padding: 14px 28px;
+        background: var(--slate-primary);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.2s;
+        display: inline-block;
+    }
+
+    .btn-primary:hover {
+        background: var(--slate-light);
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        padding: 14px 28px;
+        background: transparent;
+        color: var(--text-primary);
+        text-decoration: none;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        transition: all 0.2s;
+        display: inline-block;
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--slate-light);
+        color: var(--slate-light);
+    }
+
+    /* Section Styles */
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--slate-light);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Cards */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 28px;
+    }
+
+    .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-left: 3px solid var(--slate-primary);
+        padding: 32px;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+
+    .card:hover {
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        color: var(--text-primary);
+    }
+
+    .card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .card-link {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--slate-light);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .card-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Features List */
+    .features-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+    }
+
+    .feature-item {
+        border-left: 2px solid var(--slate-primary);
+        padding-left: 20px;
+    }
+
+    .feature-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: var(--text-primary);
+    }
+
+    .feature-item p {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    /* Methodology Section */
+    .methodology-grid {
+        display: grid;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .methodology-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        padding: 40px;
+        border-radius: 6px;
+    }
+
+    .methodology-number {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--slate-light);
+        margin-bottom: 8px;
+    }
+
+    .methodology-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .methodology-item .subtitle {
+        font-style: italic;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+
+    .methodology-item p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .methodology-example {
+        background: var(--bg-secondary);
+        border-left: 3px solid var(--slate-primary);
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+    .methodology-example strong {
+        color: var(--slate-light);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Industry Tags */
+    .industry-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+    .tag {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        color: var(--text-secondary);
+    }
+
+    /* Contact Section */
+    .contact-section {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        padding: 60px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .contact-section p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2rem; }
+        .hero-description { font-size: 1.1rem; }
+        .section-title { font-size: 2rem; }
+        .card-grid { grid-template-columns: 1fr; }
+        .contact-section { padding: 40px 24px; }
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-tagline">Upstream Risk Translation Applied</div>
+        <h1>AI-Powered Security & Governance<br>for Regulated Industries</h1>
+        <p class="hero-description">
+            Exprima provides fractional security executive services for organizations navigating 
+            complex regulatory environments. Built on Upstream Risk Translation methodology 
+            and enhanced by AI-powered tools, services deliver early warning advantage, smarter 
+            control design, and strategic risk assessment.
+        </p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn-primary">Schedule Strategy Call</a>
+            <a href="/platform/" class="btn-secondary">Explore Platform & Tools</a>
+        </div>
+        
+        <div class="industry-tags">
+            <span class="tag">Defense Contractors</span>
+            <span class="tag">Healthcare</span>
+            <span class="tag">Financial Services</span>
+            <span class="tag">Critical Infrastructure</span>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Core Services</div>
+            <h2 class="section-title">Strategic Leadership Enhanced by AI</h2>
+            <p class="section-description">
+                Combining executive-level expertise with AI-powered tools to deliver 
+                comprehensive security and governance programs.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Fractional Security Executive</h3>
+                <p>
+                    Strategic security leadership without the full-time executive salary. 
+                    Embedded 2-4 days per month to provide risk management, compliance oversight, 
+                    vendor assessment, and board-level reporting.
+                </p>
+                <a href="/services/#fractional-executive" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="card">
+                <h3>AI Security & Governance</h3>
+                <p>
+                    Complete AI governance programs including shadow AI discovery, policy 
+                    enforcement, model security, and regulatory compliance (NIST AI RMF, 
+                    EU AI Act, sector-specific requirements).
+                </p>
+                <a href="/services/#ai-governance" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="card">
+                <h3>Compliance Program Architecture</h3>
+                <p>
+                    Framework-driven GRC programs for CMMC, FedRAMP, HIPAA, SOC2, and PCI-DSS. 
+                    Controls designed to survive audits while maintaining operational velocity.
+                </p>
+                <a href="/services/#compliance" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="card">
+                <h3>Strategic Risk Advisory</h3>
+                <p>
+                    Executive counsel on complex risk decisions including regulatory changes, 
+                    vendor risk assessment, M&A security due diligence, and authorization 
+                    pathway selection.
+                </p>
+                <a href="/services/#advisory" class="card-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Methodology Section -->
+<section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">The Differentiator</div>
+            <h2 class="section-title">Built on Upstream Risk Translation</h2>
+            <p class="section-description">
+                Exprima applies systematic frameworks created by founder Elliott Mattice over 
+                25 years of federal program leadership. These frameworks convert early-stage 
+                signals into strategic intelligence while decision margin still exists.
+            </p>
+        </div>
+
+        <div class="methodology-grid">
+            <div class="methodology-item">
+                <div class="methodology-number">Framework 01</div>
+                <h3>Policy Translation Method</h3>
+                <p class="subtitle">Read regulatory intent 6-12 months before publication</p>
+                <p>
+                    Most organizations wait for final regulations before preparing. Policy Translation 
+                    Method reads upstream signals in draft guidance, comment periods, and legislative 
+                    language to identify enforcement priorities early.
+                </p>
+                <div class="methodology-example">
+                    <strong>Applied to Client Work:</strong>
+                    <p style="margin-top: 8px;">
+                        When preparing defense contractors for CMMC certification, signals from DoD 
+                        guidance memos six months prior reveal priority enforcement areas. Compliance 
+                        programs are configured proactively using Clause Atlas tool to scan for these 
+                        anticipated requirements, creating 6-12 month preparation advantage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="methodology-item">
+                <div class="methodology-number">Framework 02</div>
+                <h3>Geopolitical Risk Posture</h3>
+                <p class="subtitle">Assess vendor and supply chain through state actor lens</p>
+                <p>
+                    Traditional vendor risk focuses on SOC2 reports and security questionnaires. 
+                    Geopolitical Risk Posture adds analysis of supply chain dependencies, export 
+                    control signals, and procurement policy shifts driven by strategic competition.
+                </p>
+                <div class="methodology-example">
+                    <strong>Applied to Client Work:</strong>
+                    <p style="margin-top: 8px;">
+                        When assessing healthcare clients' AI model providers, analysis includes 
+                        data sovereignty concerns, export control implications, and alternative 
+                        vendor availability. ZeroTrusted.ai platform monitors model dependencies 
+                        and flags geopolitical risk exposure in real-time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="methodology-item">
+                <div class="methodology-number">Framework 03</div>
+                <h3>Incentive Analysis for Control Design</h3>
+                <p class="subtitle">Design controls aligned with stakeholder motivations</p>
+                <p>
+                    Generic compliance templates fail audits and create operational friction. Incentive 
+                    Analysis designs controls based on how auditors actually verify, how engineers 
+                    actually work, and what executives actually prioritize—maximizing both audit 
+                    success and operational acceptance.
+                </p>
+                <div class="methodology-example">
+                    <strong>Applied to Client Work:</strong>
+                    <p style="margin-top: 8px;">
+                        When implementing AI governance programs, ZeroTrusted.ai platform policies 
+                        are configured to align with team workflows rather than blocking them. 
+                        Shadow AI is redirected through governed channels instead of prohibited outright. 
+                        Result: 90%+ audit pass rates with high operational adoption.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 20px;">
+                Complete framework documentation and case studies available at:
+            </p>
+            <a href="https://elliottmattice.work/frameworks" target="_blank" class="btn-secondary">
+                View Methodology Documentation →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Platform & Tools -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">AI-Powered Delivery</div>
+            <h2 class="section-title">Tools That Enhance Methodology Application</h2>
+            <p class="section-description">
+                Exprima uses proprietary and partner AI tools to deliver faster, more comprehensive 
+                results while applying Upstream Risk Translation frameworks.
+            </p>
+        </div>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <h4>Clause Atlas (Proprietary)</h4>
+                <p>
+                    AI-powered regulatory scanning engine that automates Policy Translation Method. 
+                    Scans contracts and documents for 10,000+ regulations including FAR, DFARS, 
+                    NIST, CMMC, and AI-specific requirements that traditional platforms miss.
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Proposal Atlas (Proprietary)</h4>
+                <p>
+                    Multi-model AI proposal generation system applying Incentive Analysis frameworks. 
+                    Seven AI models collaborate in parallel debate architecture, with synthetic 
+                    evaluators reviewing output for compliance and competitive optimization.
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <h4>ZeroTrusted.ai Platform (Partner)</h4>
+                <p>
+                    Enterprise AI governance platform providing AI Firewall, AI Gateway, and AI 
+                    Health Check capabilities. Configured using Incentive Analysis to enforce 
+                    policies teams actually follow while maintaining full compliance and audit trails.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="/platform/" class="btn-primary">Explore Platform Capabilities →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Track Record -->
+<section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Proven Results</div>
+            <h2 class="section-title">High-Consequence Environments</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; text-align: center; margin-top: 40px;">
+            <div>
+                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">40+</div>
+                <div style="color: var(--text-secondary);">Federal Authorizations</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">FedRAMP, CMMC, DoD ATOs</div>
+            </div>
+            <div>
+                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">$350M+</div>
+                <div style="color: var(--text-secondary);">Portfolio Value</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Programs managed across defense, healthcare, federal</div>
+            </div>
+            <div>
+                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">90%+</div>
+                <div style="color: var(--text-secondary);">Audit Pass Rate</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">vs. 60% industry average</div>
+            </div>
+            <div>
+                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">25+</div>
+                <div style="color: var(--text-secondary);">Years Experience</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Federal program leadership</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.7;">
+                Organizations served include federal agencies (TSA, DCSA, DoD), defense contractors 
+                (prime and subcontractors), healthcare enterprises (VA/DoD healthcare systems), 
+                and technology companies navigating federal authorization pathways.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="contact-section">
+            <h2>Ready to Apply Upstream Risk Translation?</h2>
+            <p>
+                Schedule a strategy call to discuss how systematic frameworks and AI-powered tools 
+                can address your organization's security and governance challenges.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://calendly.com/elliott-mattice-exprima/30min" target="_blank" class="btn-primary">
+                    Schedule 30-Minute Call
+                </a>
+                <a href="mailto:contact@exprima.io" class="btn-secondary">
+                    Email: contact@exprima.io
+                </a>
+            </div>
+            <p style="margin-top: 28px; font-size: 0.95rem; color: var(--text-muted);">
+                Phone: (202) 262-4088 · Based in Alameda, CA · Serving organizations nationwide
+            </p>
+        </div>
+    </div>
+</section>

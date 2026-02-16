@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<style>
+    .page-header {
+        padding: 80px 0 60px;
+        background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+        color: var(--text-primary);
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.6;
+    }
+
+    .page-content {
+        padding: 60px 0 80px;
+    }
+
+    .page-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 60px 0 24px;
+        color: var(--text-primary);
+    }
+
+    .page-content h2:first-child {
+        margin-top: 0;
+    }
+
+    .page-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 40px 0 16px;
+        color: var(--text-primary);
+    }
+
+    .page-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+    }
+
+    .page-content ul, .page-content ol {
+        margin: 20px 0 20px 24px;
+        color: var(--text-secondary);
+    }
+
+    .page-content li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+
+    .page-content a {
+        color: var(--slate-light);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s;
+    }
+
+    .page-content a:hover {
+        border-bottom-color: var(--slate-light);
+    }
+
+    .page-content strong {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+</style>
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p>{{ page.description }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="container">
+        {{ content }}
+    </div>
+</div>

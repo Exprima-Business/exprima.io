@@ -1,0 +1,43 @@
+# Site Settings
+title: Exprima
+description: Upstream Risk Translation Applied - AI-Powered Security & Governance for Regulated Industries
+url: "https://exprima.io"
+baseurl: ""
+
+# Company Info
+company:
+  name: Exprima
+  tagline: "Upstream Risk Translation Applied"
+  founder: Elliott Mattice
+  phone: "(202) 262-4088"
+  email: contact@exprima.io
+  address: "1311 Park St, #1164, Alameda, CA 94501"
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+timezone: America/Los_Angeles
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
