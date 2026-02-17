@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exprima | AI-Powered Security & Governance for Regulated Industries</title>
+    <meta name="description" content="Security executive services enhanced by AI-powered tools and systematic frameworks for early warning advantage in high-consequence environments.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-primary: #1a5f7a;
+            --teal-light: #2d8ba8;
+            --navy-dark: #0d3d52;
+            --teal-accent: #57a6c1;
+            --ivory: #faf9f6;
+            --cream: #f5f3ee;
+            --warm-white: #ffffff;
+            --mid-gray: #9e9b93;
+            --text-dark: #2a2825;
+            --text-body: #4a4643;
+            --text-light: #6b6762;
+            --border-light: #d9d6cf;
+            --font-display: 'Inter', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--ivory);
+            color: var(--text-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Layout ─── */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* ─── Page Routing ─── */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        /* ─── Site Nav ─── */
+        .site-nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-light);
+            background: rgba(250, 249, 246, 0.96);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-nav .container { display: flex; justify-content: space-between; align-items: center; }
+
+        .nav-brand { display: flex; flex-direction: column; cursor: pointer; }
+        .nav-brand-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        .nav-brand-tag {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--teal-light);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-link {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-body);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+        .nav-link:hover { color: var(--teal-light); }
+        .nav-link.active { color: var(--navy-primary); font-weight: 600; }
+
+        .btn-nav {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            padding: 9px 18px;
+            background: var(--navy-primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .btn-nav:hover { background: var(--teal-light); }
+
+        /* ─── Buttons ─── */
+        .btn-primary {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            padding: 14px 28px;
+            background: var(--navy-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+        .btn-secondary {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            padding: 14px 28px;
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+
+        /* ─── Section Patterns ─── */
+        .section { padding: 80px 0; }
+        .section-alt { padding: 80px 0; background: var(--cream); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+        .section-white { padding: 80px 0; background: var(--warm-white); }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--teal-light);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ─── Page Header ─── */
+        .page-header {
+            padding: 60px 0 40px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .page-header h1 { font-size: 2.2rem; color: var(--text-dark); margin-bottom: 12px; }
+        .page-header p { font-size: 1.05rem; color: var(--text-body); max-width: 700px; }
+
+        /* ─── Hero ─── */
+        .hero {
+            padding: 100px 0 80px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .hero-tagline {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--teal-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            margin-bottom: 40px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        /* ─── Cards ─── */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+
+        .card {
+            background: var(--warm-white);
+            border: 1px solid var(--border-light);
+            border-left: 3px solid var(--navy-primary);
+            padding: 32px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .card h3 { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 12px; }
+        .card p { color: var(--text-body); line-height: 1.6; }
+
+        /* ─── Industry Cards ─── */
+        .industry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+
+        .industry-card {
+            background: var(--warm-white);
+            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .industry-card:hover { border-color: var(--teal-light); box-shadow: 0 6px 20px rgba(26,95,122,0.12); transform: translateY(-2px); }
+        .industry-card-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+        .industry-icon {
+            width: 48px; height: 48px; border-radius: 6px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .industry-card h3 { font-size: 1.25rem; color: var(--text-dark); }
+        .industry-card p { color: var(--text-body); line-height: 1.6; margin-bottom: 12px; }
+        .industry-details {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--teal-light);
+            line-height: 1.8;
+        }
+
+        /* ─── Framework Icons ─── */
+        .framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
+        .framework-item { text-align: center; }
+        .framework-item h3 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 12px; margin-top: 20px; }
+        .framework-item p { font-size: 0.95rem; color: var(--text-body); line-height: 1.6; }
+
+        /* ─── Track Record ─── */
+        .track-record { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+        .track-number { font-family: var(--font-mono); font-size: 2.5rem; color: var(--teal-light); margin-bottom: 8px; }
+        .track-label { color: var(--text-body); font-weight: 500; }
+        .track-sub { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+        /* ─── Service Sections ─── */
+        .service-section { margin: 0 0 60px; padding: 0 0 60px; border-bottom: 1px solid var(--border-light); }
+        .service-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .service-title { font-size: 1.8rem; color: var(--text-dark); margin-bottom: 6px; }
+        .service-tagline { font-style: italic; color: var(--text-light); margin-bottom: 20px; }
+        .service-body { color: var(--text-body); line-height: 1.7; margin-bottom: 20px; }
+
+        .service-details {
+            background: var(--warm-white);
+            border: 1px solid var(--border-light);
+            border-left: 3px solid var(--navy-primary);
+            padding: 24px;
+            border-radius: 6px;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .service-details h4 { font-size: 1.05rem; color: var(--text-dark); margin-bottom: 12px; }
+        .service-details ul { list-style: none; }
+        .service-details li {
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+        .service-details li:before { content: "→"; position: absolute; left: 0; color: var(--teal-light); }
+
+        .methodology-callout {
+            background: var(--cream);
+            border-left: 3px solid var(--navy-primary);
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .methodology-callout-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--teal-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .methodology-callout p { color: var(--text-body); line-height: 1.6; }
+
+        .pricing-box {
+            display: inline-block;
+            background: var(--cream);
+            border: 1px solid var(--border-light);
+            padding: 14px 22px;
+            border-radius: 6px;
+            margin-top: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            color: var(--text-dark);
+        }
+
+        /* ─── Engagement Timeline ─── */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline-bar {
+            position: absolute;
+            top: 40px;
+            left: 5%; right: 5%;
+            height: 2px;
+            background: var(--teal-light);
+        }
+        .timeline-card { position: relative; }
+        .timeline-dot {
+            width: 20px; height: 20px;
+            background: var(--teal-light);
+            border-radius: 50%;
+            margin: 30px auto 20px;
+            border: 3px solid var(--ivory);
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-inner {
+            background: var(--warm-white);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .timeline-phase {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--teal-light);
+            margin-bottom: 8px;
+        }
+        .timeline-inner h3 { font-size: 1.15rem; color: var(--text-dark); margin-bottom: 12px; }
+        .timeline-list { list-style: none; }
+        .timeline-list li {
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+        .timeline-list li:before { content: "•"; position: absolute; left: 0; color: var(--teal-light); }
+
+        /* ─── Platform Tools ─── */
+        .tool-block {
+            background: var(--warm-white);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .tool-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--teal-light); margin-bottom: 8px; }
+        .tool-block h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 6px; }
+        .tool-block .tool-subtitle { font-style: italic; color: var(--text-light); margin-bottom: 16px; }
+        .tool-block p { color: var(--text-body); line-height: 1.7; margin-bottom: 16px; }
+        .tool-callout {
+            background: var(--cream);
+            border-left: 3px solid var(--navy-primary);
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        /* ─── About ─── */
+        .founder-block {
+            background: var(--warm-white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            margin: 40px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .founder-photo {
+            width: 200px; height: 200px;
+            background: var(--cream);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+        .founder-photo img { width: 200px; height: 200px; border-radius: 6px; object-fit: cover; }
+        .founder-name { font-size: 1.6rem; color: var(--text-dark); margin-bottom: 6px; }
+        .founder-role { font-family: var(--font-mono); font-size: 0.85rem; color: var(--teal-light); margin-bottom: 20px; }
+        .founder-bio { color: var(--text-body); line-height: 1.7; margin-bottom: 12px; }
+        .founder-bio a { color: var(--teal-light); text-decoration: none; }
+        .founder-bio a:hover { text-decoration: underline; }
+
+        /* ─── Donut Chart ─── */
+        .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 800px; margin: 0 auto; align-items: center; }
+        .chart-legend { display: grid; gap: 16px; }
+        .legend-item { display: flex; align-items: center; gap: 12px; }
+        .legend-swatch { width: 40px; height: 40px; border-radius: 4px; flex-shrink: 0; }
+        .legend-pct { font-weight: 600; color: var(--text-dark); font-size: 1.1rem; }
+        .legend-label { color: var(--text-body); font-size: 0.9rem; }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 60px 0 40px;
+            background: var(--cream);
+            border-top: 1px solid var(--border-light);
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+        .footer-brand-name { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 12px; }
+        .footer-brand-text { font-size: 0.875rem; color: var(--text-body); line-height: 1.6; margin-bottom: 10px; }
+        .footer-col-label {
+            font-family: var(--font-mono); font-size: 0.75rem;
+            color: var(--teal-light); text-transform: uppercase;
+            letter-spacing: 0.1em; margin-bottom: 16px;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links button, .footer-links a {
+            font-size: 0.875rem; color: var(--text-body);
+            text-decoration: none; background: none; border: none;
+            cursor: pointer; padding: 0; transition: color 0.2s;
+        }
+        .footer-links button:hover, .footer-links a:hover { color: var(--teal-light); }
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ─── Visual Placeholder ─── */
+        .visual-placeholder {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--cream);
+            border: 2px dashed var(--border-light);
+            border-radius: 8px;
+            padding: 60px;
+            text-align: center;
+        }
+        .visual-placeholder .label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; }
+        .visual-placeholder p { font-size: 1.1rem; color: var(--text-body); }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .industry-grid { grid-template-columns: 1fr; }
+            .framework-grid { grid-template-columns: 1fr; }
+            .timeline-grid { grid-template-columns: 1fr; }
+            .timeline-bar { display: none; }
+            .track-record { grid-template-columns: 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .founder-block { grid-template-columns: 1fr; }
+            .chart-grid { grid-template-columns: 1fr; }
+            .nav-links { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     SHARED SITE NAVIGATION
+═══════════════════════════════════════════════════════ -->
+<nav class="site-nav">
+    <div class="container">
+        <div class="nav-brand" onclick="showPage('home')">
+            <span class="nav-brand-name">Exprima</span>
+            <span class="nav-brand-tag">Upstream Risk Translation Applied</span>
+        </div>
+        <div class="nav-links">
+            <button class="nav-link" onclick="showPage('services')">Services</button>
+            <button class="nav-link" onclick="showPage('platform')">Platform</button>
+            <button class="nav-link" onclick="showPage('about')">About</button>
+            <a href="https://calendly.com/elliott-mattice-exprima/30min" target="_blank" class="btn-nav">Schedule Call</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════════════════ -->
+<div id="home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tagline">Upstream Risk Translation Applied</div>
+            <h1>AI-Powered Security & Governance<br>for Regulated Industries</h1>
+            <p class="hero-description">
+                Security executive services enhanced by AI-powered tools and systematic frameworks 
+                for early warning advantage in high-consequence environments.
+            </p>
+            <div class="hero-cta">
+                <a href="https://calendly.com/elliott-mattice-exprima/30min" target="_blank" class="btn-primary">Schedule Strategy Call</a>
+                <button class="btn-secondary" onclick="showPage('platform')">Explore Platform & Tools</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Industries We Serve</div>
+                <h2 class="section-title">Regulated, High-Consequence Environments</h2>
+                <p class="section-description">
+                    Specialized expertise in industries where security failures create business-critical 
+                    consequences and regulatory compliance is mandatory, not optional.
+                </p>
+            </div>
+
+            <div class="industry-grid">
+                <!-- Defense -->
+                <div class="industry-card">
+                    <div class="industry-card-header">
+                        <div class="industry-icon" style="background: var(--navy-primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="10" rx="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3>Defense Contractors</h3>
+                    </div>
+                    <p>CMMC certification, FedRAMP authorization, DoD ATOs, and NIST 800-171 compliance programs that survive C3PAO audits while maintaining operational velocity.</p>
+                    <div class="industry-details">
+                        → Policy Translation detects CMMC changes 6 months early<br>
+                        → Clause Atlas scans FAR/DFARS obligations competitors miss<br>
+                        → Geopolitical Risk assesses supply chain dependencies
+                    </div>
+                </div>
+
+                <!-- Healthcare -->
+                <div class="industry-card">
+                    <div class="industry-card-header">
+                        <div class="industry-icon" style="background: var(--teal-light);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 2v20M2 12h20"/>
+                            </svg>
+                        </div>
+                        <h3>Healthcare</h3>
+                    </div>
+                    <p>HIPAA compliance, patient data protection, medical device security, and AI governance for clinical decision support systems and healthcare automation.</p>
+                    <div class="industry-details">
+                        → AI governance for clinical systems and patient data<br>
+                        → ZeroTrusted.ai monitors shadow AI in healthcare ops<br>
+                        → Incentive Analysis designs controls clinicians follow
+                    </div>
+                </div>
+
+                <!-- Financial Services -->
+                <div class="industry-card">
+                    <div class="industry-card-header">
+                        <div class="industry-icon" style="background: var(--navy-primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Financial Services</h3>
+                    </div>
+                    <p>SOC2 Type II, PCI-DSS compliance, banking regulations, and AI risk management for fintech platforms, payment processors, and financial automation systems.</p>
+                    <div class="industry-details">
+                        → Policy Translation tracks SEC AI guidance and banking regs<br>
+                        → AI governance for algorithmic trading and fraud detection<br>
+                        → Vendor risk with geopolitical considerations
+                    </div>
+                </div>
+
+                <!-- Critical Infrastructure -->
+                <div class="industry-card">
+                    <div class="industry-card-header">
+                        <div class="industry-icon" style="background: var(--teal-light);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3>Critical Infrastructure</h3>
+                    </div>
+                    <p>TSA security directives, CISA requirements, sector-specific regulations for energy, transportation, utilities, and industrial control systems.</p>
+                    <div class="industry-details">
+                        → Geopolitical Risk assesses nation-state threats to OT/ICS<br>
+                        → Policy Translation monitors TSA/CISA directive evolution<br>
+                        → Vendor diversification for supply chain resilience
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Placeholder -->
+    <section class="section-white">
+        <div class="container">
+            <div class="visual-placeholder">
+                <div class="label">VISUAL PLACEHOLDER</div>
+                <p>Custom infographic or illustration showing Upstream Risk Translation methodology<br>
+                <span style="font-size: 0.9rem; color: var(--text-light);">(To be designed)</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do (Services) -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Strategic Security Services</h2>
+                <p class="section-description">
+                    Expert services enhanced by systematic frameworks and AI-powered tools 
+                    for organizations in regulated, high-consequence environments.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Federal Compliance Programs</h3>
+                    <p style="font-style: italic; color: var(--teal-light); margin-bottom: 14px; font-size: 0.95rem;">6-12 month preparation advantage before regulations publish</p>
+                    <p>CMMC, FedRAMP, and DoD ATO readiness using Policy Translation Method. Compliance programs configured proactively based on draft guidance signals—while competitors wait for final rules.</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); font-size: 0.88rem; color: var(--text-body);">
+                        <strong style="color: var(--text-dark);">Deliverables:</strong> Gap assessment, control implementation, C3PAO/3PAO coordination, evidence architecture
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>AI Security & Governance</h3>
+                    <p style="font-style: italic; color: var(--teal-light); margin-bottom: 14px; font-size: 0.95rem;">Shadow AI governed without blocking innovation</p>
+                    <p>Complete AI governance from discovery through enforcement. ZeroTrusted.ai platform deployment with policies designed using Incentive Analysis—teams follow controls instead of bypassing them.</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); font-size: 0.88rem; color: var(--text-body);">
+                        <strong style="color: var(--text-dark);">Deliverables:</strong> Shadow AI assessment, policy framework, platform deployment, regulatory compliance
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Fractional Security Executive</h3>
+                    <p style="font-style: italic; color: var(--teal-light); margin-bottom: 14px; font-size: 0.95rem;">Strategic leadership enhanced by AI-powered intelligence</p>
+                    <p>Embedded security executive 2-4 days/month providing risk management, compliance oversight, and board reporting—enhanced by Clause Atlas scanning and Geopolitical Risk Posture assessment.</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); font-size: 0.88rem; color: var(--text-body);">
+                        <strong style="color: var(--text-dark);">Deliverables:</strong> Risk prioritization, compliance oversight, vendor assessment, board reporting
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Strategic Risk Advisory</h3>
+                    <p style="font-style: italic; color: var(--teal-light); margin-bottom: 14px; font-size: 0.95rem;">Geopolitical lens on technology decisions</p>
+                    <p>Executive counsel on high-stakes decisions where traditional risk frameworks miss strategic dependencies. Vendor risk through state actor lens, M&A due diligence, supply chain diversification.</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); font-size: 0.88rem; color: var(--text-body);">
+                        <strong style="color: var(--text-dark);">Deliverables:</strong> Vendor risk reports, M&A assessment, regulatory impact analysis, authorization strategy
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-primary" onclick="showPage('services')">View Detailed Services →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Differentiator</div>
+                <h2 class="section-title">Systematic Frameworks, Not Generic Templates</h2>
+                <p class="section-description">
+                    Upstream Risk Translation methodology converts early-stage signals into strategic 
+                    intelligence. Three frameworks developed over 25 years of federal program leadership.
+                </p>
+            </div>
+
+            <div class="framework-grid">
+                <div class="framework-item">
+                    <svg width="64" height="64" viewBox="0 0 64 64">
+                        <rect x="12" y="18" width="28" height="36" rx="2" fill="none" stroke="#1a5f7a" stroke-width="2"/>
+                        <rect x="16" y="14" width="28" height="36" rx="2" fill="#e6f4f8" stroke="#1a5f7a" stroke-width="2"/>
+                        <line x1="20" y1="22" x2="40" y2="22" stroke="#2d8ba8" stroke-width="1.5"/>
+                        <line x1="20" y1="28" x2="36" y2="28" stroke="#2d8ba8" stroke-width="1.5"/>
+                        <line x1="20" y1="34" x2="38" y2="34" stroke="#2d8ba8" stroke-width="1.5"/>
+                        <circle cx="44" cy="40" r="8" fill="none" stroke="#1a5f7a" stroke-width="2"/>
+                        <line x1="50" y1="46" x2="56" y2="52" stroke="#1a5f7a" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M 48 8 L 56 12 L 48 16" fill="none" stroke="#2d8ba8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="38" y1="12" x2="56" y2="12" stroke="#2d8ba8" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Policy Translation</h3>
+                    <p>Read regulatory intent 6-12 months before publication by monitoring draft guidance and legislative signals</p>
+                </div>
+
+                <div class="framework-item">
+                    <svg width="64" height="64" viewBox="0 0 64 64">
+                        <circle cx="32" cy="32" r="22" fill="none" stroke="#1a5f7a" stroke-width="2"/>
+                        <ellipse cx="32" cy="32" rx="22" ry="8" fill="none" stroke="#2d8ba8" stroke-width="1.5" opacity="0.6"/>
+                        <ellipse cx="32" cy="32" rx="22" ry="14" fill="none" stroke="#2d8ba8" stroke-width="1.5" opacity="0.4"/>
+                        <ellipse cx="32" cy="32" rx="8" ry="22" fill="none" stroke="#2d8ba8" stroke-width="1.5" opacity="0.6"/>
+                        <circle cx="20" cy="20" r="3" fill="#1a5f7a"/>
+                        <circle cx="44" cy="24" r="3" fill="#1a5f7a"/>
+                        <circle cx="38" cy="44" r="3" fill="#1a5f7a"/>
+                        <circle cx="24" cy="42" r="3" fill="#1a5f7a"/>
+                        <line x1="20" y1="20" x2="44" y2="24" stroke="#2d8ba8" stroke-width="1.5" opacity="0.5"/>
+                        <line x1="44" y1="24" x2="38" y2="44" stroke="#2d8ba8" stroke-width="1.5" opacity="0.5"/>
+                        <line x1="38" y1="44" x2="24" y2="42" stroke="#2d8ba8" stroke-width="1.5" opacity="0.5"/>
+                        <line x1="24" y1="42" x2="20" y2="20" stroke="#2d8ba8" stroke-width="1.5" opacity="0.5"/>
+                    </svg>
+                    <h3>Geopolitical Risk Posture</h3>
+                    <p>Assess vendor and supply chain dependencies through state actor lens and procurement policy forecasting</p>
+                </div>
+
+                <div class="framework-item">
+                    <svg width="64" height="64" viewBox="0 0 64 64">
+                        <path d="M 32 12 L 35 18 L 42 18 L 46 24 L 52 27 L 52 37 L 46 40 L 42 46 L 35 46 L 32 52 L 29 46 L 22 46 L 18 40 L 12 37 L 12 27 L 18 24 L 22 18 L 29 18 Z" fill="none" stroke="#1a5f7a" stroke-width="2" stroke-linejoin="round"/>
+                        <circle cx="32" cy="32" r="8" fill="none" stroke="#1a5f7a" stroke-width="2"/>
+                        <circle cx="32" cy="28" r="3" fill="#2d8ba8"/>
+                        <path d="M 26 38 Q 26 33 32 33 Q 38 33 38 38" fill="none" stroke="#2d8ba8" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M 48 10 L 52 14 L 48 18" fill="none" stroke="#2d8ba8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 16 46 L 12 50 L 16 54" fill="none" stroke="#2d8ba8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Incentive Analysis</h3>
+                    <p>Design controls based on how auditors verify and how teams work—maximizing compliance and adoption simultaneously</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="color: var(--text-body); margin-bottom: 20px;">Complete framework documentation:</p>
+                <a href="https://elliottmattice.work/frameworks" target="_blank" class="btn-secondary">View Methodology Documentation →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Record -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Track Record</div>
+                <h2 class="section-title">Proven in High-Consequence Environments</h2>
+                <p class="section-description">25+ years leading federal authorization programs, cybersecurity operations, and compliance initiatives across defense, healthcare, and critical infrastructure.</p>
+            </div>
+            <div class="track-record">
+                <div>
+                    <div class="track-number">40+</div>
+                    <div class="track-label">Federal Authorizations</div>
+                    <div class="track-sub">FedRAMP, CMMC, DoD ATOs</div>
+                </div>
+                <div>
+                    <div class="track-number">$350M+</div>
+                    <div class="track-label">Portfolio Value</div>
+                    <div class="track-sub">Programs managed</div>
+                </div>
+                <div>
+                    <div class="track-number">25+</div>
+                    <div class="track-label">Years Experience</div>
+                    <div class="track-sub">Federal program leadership</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include footer.html %}
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: SERVICES
+═══════════════════════════════════════════════════════ -->
+<div id="services" class="page">
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Services</h1>
+            <p>Security executive services, AI governance programs, and compliance architecture for regulated industries.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+
+            <!-- Engagement Timeline -->
+            <div style="margin-bottom: 80px;">
+                <div class="section-header">
+                    <div class="section-label">How We Work</div>
+                    <h2 class="section-title">Engagement Process</h2>
+                    <p class="section-description">Systematic approach from assessment through optimization</p>
+                </div>
+                <div class="timeline-grid">
+                    <div class="timeline-bar"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-inner">
+                            <div class="timeline-phase">MONTH 1-2</div>
+                            <h3>Discovery</h3>
+                            <ul class="timeline-list">
+                                <li>Risk assessment</li>
+                                <li>Gap analysis</li>
+                                <li>Framework selection</li>
+                                <li>Roadmap planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-inner">
+                            <div class="timeline-phase">MONTH 3-6</div>
+                            <h3>Implementation</h3>
+                            <ul class="timeline-list">
+                                <li>Tool deployment</li>
+                                <li>Policy configuration</li>
+                                <li>Team training</li>
+                                <li>Evidence generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-inner">
+                            <div class="timeline-phase">MONTH 6+</div>
+                            <h3>Optimization</h3>
+                            <ul class="timeline-list">
+                                <li>Continuous monitoring</li>
+                                <li>Policy refinement</li>
+                                <li>Executive reporting</li>
+                                <li>Program maturation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 1 -->
+            <div class="service-section">
+                <h2 class="service-title">Federal Compliance Programs</h2>
+                <p class="service-tagline">Prepare 6-12 months ahead of regulatory publication</p>
+                <p class="service-body">Most organizations scramble when CMMC requirements publish or FedRAMP guidance changes. Policy Translation Method reads draft DoD guidance, legislative signals, and comment periods to identify enforcement priorities months early—transforming compressed compliance timelines into comfortable roadmaps.</p>
+                <div class="service-details">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li><strong>CMMC Level 2/3 Readiness:</strong> Gap assessment, control implementation, C3PAO coordination</li>
+                        <li><strong>FedRAMP Authorization:</strong> SSP development, 3PAO engagement, pathway optimization</li>
+                        <li><strong>DoD Authorization to Operate:</strong> IL2-IL6 compliance, evidence architecture</li>
+                        <li><strong>NIST 800-171/800-53:</strong> Control mapping, implementation verification</li>
+                    </ul>
+                </div>
+                <div class="methodology-callout">
+                    <div class="methodology-callout-label">How Policy Translation Applies</div>
+                    <p>Signals from DoD guidance memos six months prior reveal priority enforcement areas. Compliance programs are configured proactively using Clause Atlas to scan for anticipated requirements—creating preparation advantage over competitors still waiting for final publication.</p>
+                </div>
+                <div class="pricing-box">
+                    <strong>Investment:</strong> $25,000-$60,000 &nbsp;·&nbsp; <strong>Timeline:</strong> 3-9 months
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-section">
+                <h2 class="service-title">AI Security & Governance</h2>
+                <p class="service-tagline">Shadow AI governed without blocking innovation</p>
+                <p class="service-body">Every organization is deploying AI—GitHub Copilot, ChatGPT, AI features in products—yet few have secured or governed these deployments. Complete AI governance framework from shadow AI discovery through platform enforcement, with policies teams actually follow.</p>
+                <div class="service-details">
+                    <h4>Program Components</h4>
+                    <ul>
+                        <li><strong>Shadow AI Discovery:</strong> Identify unauthorized AI tools, analyze data exposure risk</li>
+                        <li><strong>AI Acceptable Use Policy:</strong> Framework balancing innovation with data protection</li>
+                        <li><strong>ZeroTrusted.ai Platform:</strong> AI Firewall, Gateway, drift detection, full audit trails</li>
+                        <li><strong>Regulatory Compliance:</strong> NIST AI RMF, EU AI Act, sector-specific requirements</li>
+                    </ul>
+                </div>
+                <div class="methodology-callout">
+                    <div class="methodology-callout-label">How Incentive Analysis Applies</div>
+                    <p>ZeroTrusted.ai platform policies are configured to align with team workflows rather than blocking them. Shadow AI is redirected through governed channels instead of prohibited outright. Controls designed based on how teams actually work—achieving compliance and operational adoption.</p>
+                </div>
+                <div class="pricing-box">
+                    <strong>Program Build:</strong> $35,000-$50,000 &nbsp;·&nbsp; <strong>Platform:</strong> $1,500-$3,000/month
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-section">
+                <h2 class="service-title">Fractional Security Executive</h2>
+                <p class="service-tagline">Strategic leadership enhanced by AI-powered intelligence</p>
+                <p class="service-body">Organizations in regulated environments require senior security leadership but often cannot justify $200K+ full-time CISO salary. Embedded security executive 2-4 days per month delivers strategic leadership enhanced by Clause Atlas regulatory scanning and Geopolitical Risk Posture vendor assessment.</p>
+                <div class="service-details">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li><strong>Risk Management & Prioritization:</strong> Threat modeling, risk quantification, investment roadmapping</li>
+                        <li><strong>Compliance Program Oversight:</strong> CMMC, FedRAMP, HIPAA, SOC2 framework implementation</li>
+                        <li><strong>Vendor & Supply Chain Security:</strong> Third-party risk using Geopolitical Risk Posture methodology</li>
+                        <li><strong>Board & Executive Reporting:</strong> Risk communication to non-technical audiences</li>
+                        <li><strong>AI Security & Governance:</strong> Shadow AI discovery, policy development, regulatory compliance</li>
+                    </ul>
+                </div>
+                <div class="pricing-box">
+                    <strong>Investment:</strong> $12,000-$18,000/month &nbsp;·&nbsp; <strong>Commitment:</strong> 6-12 months &nbsp;·&nbsp; <strong>Time:</strong> 2-4 days/month
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-section">
+                <h2 class="service-title">Strategic Risk Advisory</h2>
+                <p class="service-tagline">Geopolitical lens on technology decisions</p>
+                <p class="service-body">Executive counsel on high-stakes decisions where traditional risk frameworks miss strategic dependencies. Vendor risk assessment through state actor lens, M&A security due diligence, supply chain diversification strategy, and authorization pathway optimization.</p>
+                <div class="service-details">
+                    <h4>Advisory Services</h4>
+                    <ul>
+                        <li><strong>Vendor Risk Assessment:</strong> Geopolitical Risk Posture analysis of supply chain dependencies</li>
+                        <li><strong>M&A Security Due Diligence:</strong> Pre-acquisition security assessment and integration planning</li>
+                        <li><strong>Regulatory Change Analysis:</strong> Policy Translation of upcoming requirements and impact</li>
+                        <li><strong>Authorization Strategy:</strong> FedRAMP vs CMMC vs DoD ATO pathway optimization</li>
+                    </ul>
+                </div>
+                <div class="methodology-callout">
+                    <div class="methodology-callout-label">How Geopolitical Risk Applies</div>
+                    <p>When assessing AI model providers for healthcare clients, analysis includes data sovereignty concerns, export control implications, and alternative vendor availability. Traditional vendor risk misses strategic dependencies—Geopolitical Risk Posture identifies vulnerabilities before they become mandates.</p>
+                </div>
+                <div class="pricing-box">
+                    <strong>Project-Based:</strong> $15,000-$40,000 &nbsp;·&nbsp; <strong>Retainer:</strong> $8,000-$12,000/month
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% include footer.html %}
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: PLATFORM
+═══════════════════════════════════════════════════════ -->
+<div id="platform" class="page">
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Platform & Tools</h1>
+            <p>AI-powered tools that enhance Upstream Risk Translation methodology application at scale.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">AI-Powered Delivery</div>
+                <h2 class="section-title">Tools That Enhance Methodology</h2>
+                <p class="section-description">Exprima uses proprietary and partner AI tools to deliver faster, more comprehensive results while applying Upstream Risk Translation frameworks. Methodology determines where to look. Tools execute at scale. Expertise guides configuration.</p>
+            </div>
+
+            <div class="tool-block">
+                <div class="tool-label">Proprietary Tool 01</div>
+                <h3>Clause Atlas</h3>
+                <p class="tool-subtitle">AI Regulatory Scanning Engine</p>
+                <p>Built on large language models trained on federal regulations. Scans contracts for 10,000+ clauses across FAR, DFARS, NIST, CMMC, and AI-specific requirements that traditional GRC platforms miss. Automates Policy Translation Method by continuously monitoring draft regulations and generating compliance matrices in hours rather than weeks.</p>
+                <div class="tool-callout">
+                    <strong style="color: var(--teal-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Status: Internal Use</strong>
+                    <p style="margin-top: 8px; color: var(--text-body);">Clause Atlas operates behind Exprima's service delivery—enhancing the speed and comprehensiveness of compliance gap assessments and regulatory monitoring for all clients.</p>
+                </div>
+            </div>
+
+            <div class="tool-block">
+                <div class="tool-label">Proprietary Tool 02</div>
+                <h3>Proposal Atlas</h3>
+                <p class="tool-subtitle">Multi-Model AI Proposal Generation</p>
+                <p>Seven AI models operate in parallel with synthetic specialist roles—Technical Writer, Proposal Manager, Solution Architect, and subject matter experts. Synthetic evaluators review output from the perspective of contracting officers. Monte Carlo simulation tests against synthetic competitors to optimize win probability before submission.</p>
+                <div class="tool-callout">
+                    <strong style="color: var(--teal-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Status: Internal Use</strong>
+                    <p style="margin-top: 8px; color: var(--text-body);">Proposal Atlas supports Exprima's federal proposal and advisory deliverables. Multi-model debate produces higher-quality content than single-model generation.</p>
+                </div>
+            </div>
+
+            <div class="tool-block">
+                <div class="tool-label">Partner Platform</div>
+                <h3>ZeroTrusted.ai Platform</h3>
+                <p class="tool-subtitle">Enterprise AI Governance & Security</p>
+                <p>Enterprise-grade AI governance platform originally developed for military environments. Features AI Firewall for shadow AI detection, AI Gateway with 99% data redaction, AI Health Check for model drift detection, and full audit trails. Model-agnostic architecture supports GPT, Claude, Gemini, Llama, and on-premise models. Available as cloud or on-premise deployment.</p>
+                <div class="tool-callout">
+                    <strong style="color: var(--teal-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Status: Available for Client Deployments</strong>
+                    <p style="margin-top: 8px; color: var(--text-body);">Exprima configures ZeroTrusted.ai using Incentive Analysis framework—policies align with team workflows while maintaining compliance. Powered by ZeroTrusted.ai; implemented and managed by Exprima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include footer.html %}
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: ABOUT
+═══════════════════════════════════════════════════════ -->
+<div id="about" class="page">
+
+    <div class="page-header">
+        <div class="container">
+            <h1>About Exprima</h1>
+            <p>Founded by Elliott Mattice to apply Upstream Risk Translation methodology to organizations navigating complex regulatory and security challenges.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+
+            <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-body); max-width: 800px; margin-bottom: 40px;">
+                Exprima was founded to apply Upstream Risk Translation methodology—systematic frameworks for converting policy signals, geopolitical developments, and stakeholder incentives into strategic intelligence—to organizations navigating complex regulatory and security challenges in high-consequence environments.
+            </p>
+
+            <!-- Founder -->
+            <div class="founder-block">
+                <div class="founder-photo">
+                    <!-- Replace this div with: <img src="assets/images/elliott-mattice.jpg" alt="Elliott Mattice"> -->
+                    <span>Add photo<br>elliott-mattice.jpg</span>
+                </div>
+                <div>
+                    <h2 class="founder-name">Elliott Mattice</h2>
+                    <div class="founder-role">Founder & Chief Executive</div>
+                    <p class="founder-bio">Elliott Mattice founded Exprima to bring systematic risk frameworks developed over 25 years of federal program leadership to organizations requiring early warning advantage and smarter control design in regulated environments.</p>
+                    <p class="founder-bio">Over this period, Elliott delivered 40+ federal authorizations including FedRAMP, CMMC, and DoD ATOs while managing $350M+ portfolios. This experience revealed consistent patterns that led to development of Upstream Risk Translation methodology.</p>
+                    <p class="founder-bio">Elliott teaches these frameworks at <a href="https://elliottmattice.work" target="_blank">elliottmattice.work</a> and @upstreamrisk on YouTube. Exprima applies them using AI-powered tools for client delivery.</p>
+                </div>
+            </div>
+
+            <!-- Track Record -->
+            <div style="margin: 60px 0;">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <div class="section-label">Track Record</div>
+                    <h2 class="section-title">Proven in High-Consequence Environments</h2>
+                </div>
+                <div class="track-record">
+                    <div>
+                        <div class="track-number">40+</div>
+                        <div class="track-label">Federal Authorizations</div>
+                        <div class="track-sub">FedRAMP, CMMC, DoD ATOs</div>
+                    </div>
+                    <div>
+                        <div class="track-number">$350M+</div>
+                        <div class="track-label">Portfolio Value</div>
+                        <div class="track-sub">Programs managed</div>
+                    </div>
+                    <div>
+                        <div class="track-number">25+</div>
+                        <div class="track-label">Years Experience</div>
+                        <div class="track-sub">Federal program leadership</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Distribution -->
+            <div style="margin: 60px 0;">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <div class="section-label">Client Portfolio</div>
+                    <h2 class="section-title">Industry Distribution</h2>
+                    <p class="section-description">Experience across regulated, high-consequence environments</p>
+                </div>
+                <div class="chart-grid">
+                    <div>
+                        <svg viewBox="0 0 200 200" style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+                            <path d="M 100 20 A 80 80 0 0 1 178.8 61.2 L 100 100 Z" fill="#1a5f7a" opacity="0.9"/>
+                            <path d="M 178.8 61.2 A 80 80 0 0 1 153.2 171.3 L 100 100 Z" fill="#2d8ba8" opacity="0.9"/>
+                            <path d="M 153.2 171.3 A 80 80 0 0 1 46.8 171.3 L 100 100 Z" fill="#57a6c1" opacity="0.9"/>
+                            <path d="M 46.8 171.3 A 80 80 0 0 1 100 20 L 100 100 Z" fill="#9e9b93" opacity="0.9"/>
+                            <circle cx="100" cy="100" r="50" fill="var(--ivory)"/>
+                            <text x="100" y="95" text-anchor="middle" font-size="13" fill="#2a2825" font-family="Inter, sans-serif" font-weight="600">Industry</text>
+                            <text x="100" y="112" text-anchor="middle" font-size="13" fill="#4a4643" font-family="Inter, sans-serif">Experience</text>
+                        </svg>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-swatch" style="background: #1a5f7a;"></div>
+                            <div><div class="legend-pct">40%</div><div class="legend-label">Federal Contractor</div></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-swatch" style="background: #2d8ba8;"></div>
+                            <div><div class="legend-pct">30%</div><div class="legend-label">Healthcare</div></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-swatch" style="background: #57a6c1;"></div>
+                            <div><div class="legend-pct">20%</div><div class="legend-label">Critical Infrastructure</div></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-swatch" style="background: #9e9b93;"></div>
+                            <div><div class="legend-pct">10%</div><div class="legend-label">Other</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% include footer.html %}
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SHARED FOOTER (inline since no Jekyll)
+═══════════════════════════════════════════════════════ -->
+<template id="footer-template">
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand-name">Exprima</div>
+                    <p class="footer-brand-text">Security executive services for regulated industries, applying Upstream Risk Translation methodology with AI-powered tools.</p>
+                    <p class="footer-brand-text"><strong>Founded by Elliott Mattice</strong><br>Creator of Upstream Risk Translation</p>
+                </div>
+                <div>
+                    <div class="footer-col-label">Services</div>
+                    <ul class="footer-links">
+                        <li><button onclick="showPage('services')">Federal Compliance</button></li>
+                        <li><button onclick="showPage('services')">AI Governance</button></li>
+                        <li><button onclick="showPage('services')">Fractional Executive</button></li>
+                        <li><button onclick="showPage('services')">Strategic Advisory</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-label">Company</div>
+                    <ul class="footer-links">
+                        <li><button onclick="showPage('about')">About Exprima</button></li>
+                        <li><button onclick="showPage('platform')">Platform & Tools</button></li>
+                        <li><a href="https://elliottmattice.work" target="_blank">Methodology</a></li>
+                        <li><a href="https://youtube.com/@upstreamrisk" target="_blank">@upstreamrisk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>contact@exprima.io &nbsp;·&nbsp; (202) 262-4088 &nbsp;·&nbsp; 1311 Park St, #1164, Alameda, CA 94501</p>
+                <p style="margin-top: 8px;">© 2026 Exprima. All rights reserved. &nbsp;·&nbsp; Methodology by Elliott Mattice</p>
+            </div>
+        </div>
+    </footer>
+</template>
+
+<script>
+    // Render footer into every page
+    document.querySelectorAll('.page').forEach(function(page) {
+        var ftpl = document.getElementById('footer-template');
+        page.appendChild(ftpl.content.cloneNode(true));
+    });
+
+    // Page navigation
+    function showPage(id) {
+        document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+        document.querySelectorAll('.nav-link').forEach(function(l) { l.classList.remove('active'); });
+        document.getElementById(id).classList.add('active');
+        var link = document.querySelector('.nav-link[onclick="showPage(\'' + id + '\')"]');
+        if (link) link.classList.add('active');
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
