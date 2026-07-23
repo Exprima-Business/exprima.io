@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClauseAtlas — Exprima</title>
+<meta name="description" content="ClauseAtlas is the first compliance platform purpose-built for government regulation — it scans contracts, extracts every regulatory clause, maps controls, and tracks compliance posture in real time.">
+<meta property="og:title" content="ClauseAtlas — Exprima">
+<meta property="og:description" content="The first compliance platform purpose-built for government regulation. Months of manual clause analysis, done in minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.exprima.io/clauseatlas/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#f7f2e9; font-family:'Libre Franklin',sans-serif; color:#2b1d12; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { opacity:.75; }
+  .exp-nav-link { position:relative; }
+  .exp-nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#c05621; transition:width .25s ease; }
+  .exp-nav-link:hover::after { width:100%; }
+  .exp-nav-active { color:#c05621; }
+  .exp-nav-active::after { width:100%; }
+  .exp-cta { transition:transform .18s ease, box-shadow .18s ease; }
+  .exp-cta:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(192,86,33,.28); opacity:1; }
+  .exp-card { transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .exp-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px rgba(43,29,18,.12); border-color:#c9b89d; }
+  @keyframes expRise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .exp-grid-split, .exp-grid-hero { grid-template-columns:1fr !important; }
+  }
+  @media (max-width: 900px) {
+    .exp-nav-links { display:none !important; }
+  }
+  @media (max-width: 860px) {
+    .exp-grid-2, .exp-grid-3, .exp-grid-4 { grid-template-columns:1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .exp-pad { padding-left:22px !important; padding-right:22px !important; }
+    .exp-grid-footer { grid-template-columns:1fr 1fr !important; }
+    .exp-cta-box { padding:44px 26px !important; }
+    .exp-spot-pane { padding:36px 26px !important; }
+  }
+  @media (max-width: 480px) {
+    .exp-grid-footer { grid-template-columns:1fr !important; }
+  }
+  @media (min-width: 861px) and (max-width: 1100px) {
+    .exp-grid-4 { grid-template-columns:repeat(2,1fr) !important; }
+  }
+</style>
+</head>
+<body>
+<div style="max-width:100%; overflow-x:hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(247,242,233,.92); backdrop-filter:blur(10px); border-bottom:1px solid #e3dac9;">
+    <div class="exp-pad" style="max-width:1240px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 40px;">
+      <a href="/" style="display:flex; align-items:baseline; gap:16px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-size:23px; font-weight:800; letter-spacing:.04em;">Exprima</span>
+        <span style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460;">FEDERAL MARKET ADVISORY</span>
+      </a>
+      <div style="display:flex; gap:30px; align-items:center; font-size:14px; font-weight:600; color:#5c4a38;">
+        <div class="exp-nav-links" style="display:flex; gap:30px; align-items:center;">
+          <a class="exp-nav-link" href="/practice/">Practice</a>
+          <a class="exp-nav-link exp-nav-active" href="/clauseatlas/">ClauseAtlas</a>
+          <a class="exp-nav-link" href="/investors/">For Investors</a>
+          <a class="exp-nav-link" href="/firm/">The Firm</a>
+        </div>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="background:#2b1d12; color:#f7f2e9; padding:12px 24px; border-radius:8px; font-size:13.5px; font-weight:700;">Schedule a call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="exp-pad" style="max-width:1240px; margin:0 auto; padding:76px 40px 40px;">
+    <div class="exp-grid-hero" style="display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:center;">
+      <div style="animation:expRise .6s ease both;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#c05621; margin-bottom:26px;">THE PLATFORM</div>
+        <h1 style="font-size:clamp(34px,5.5vw,52px); line-height:1.06; font-weight:700; letter-spacing:-.02em; margin:0; text-wrap:pretty;">The map of <span style="color:#c05621;">federal regulation.</span></h1>
+        <p style="font-size:17px; line-height:1.68; color:#5c4a38; margin:26px 0 0; max-width:56ch;">ClauseAtlas is the first compliance platform purpose-built for government regulation. It scans your contracts, extracts every regulatory clause, maps each one to the controls that apply, and tracks your compliance posture in real time — turning months of manual analysis into minutes.</p>
+        <div style="display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;">
+          <a class="exp-cta" href="https://www.clauseatlas.com" style="background:#c05621; color:#fff; padding:16px 34px; border-radius:8px; font-size:14.5px; font-weight:700;">clauseatlas.com ↗</a>
+          <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="border:2px solid #2b1d12; padding:15px 30px; border-radius:8px; font-size:14.5px; font-weight:700;">See it on your contracts</a>
+        </div>
+      </div>
+      <div class="exp-card" style="background:#221710; color:#f7f2e9; border:1px solid #221710; border-radius:14px; padding:38px 34px; position:relative; animation:expRise .6s .12s ease both;">
+        <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size:44px 44px; border-radius:14px; pointer-events:none;"></div>
+        <div style="position:relative; display:flex; flex-direction:column; gap:20px;">
+          <div style="display:flex; gap:44px;">
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif; font-size:30px; font-weight:800;">186</div><div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; color:#b9a893; letter-spacing:.06em; margin-top:4px;">CLAUSES TRACKED</div></div>
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif; font-size:30px; font-weight:800;">28</div><div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; color:#b9a893; letter-spacing:.06em; margin-top:4px;">REGULATION FAMILIES</div></div>
+          </div>
+          <div style="border-top:1px solid #4a3826; padding-top:20px; display:flex; flex-direction:column; gap:12px; font-family:'Spline Sans Mono',monospace; font-size:12px; color:#c9b89d;">
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:8px; height:8px; background:#d9915f; border-radius:50%; flex-shrink:0;"></span>DFARS 252.204-7012 &nbsp;→&nbsp; NIST 800-171 (110 controls)</div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:8px; height:8px; background:#d9915f; border-radius:50%; flex-shrink:0;"></span>FAR 52.204-21 &nbsp;→&nbsp; Basic Safeguarding (31)</div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:8px; height:8px; background:#d9915f; border-radius:50%; flex-shrink:0;"></span>EO 14028 &nbsp;→&nbsp; Zero Trust + Supply Chain</div>
+          </div>
+          <div style="border-top:1px solid #4a3826; padding-top:20px;">
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; color:#b9a893; letter-spacing:.1em; margin-bottom:10px;">FAR · DFARS · NIST · OPM · EXECUTIVE ORDERS</div>
+            <div style="height:8px; background:#3a2a1c; border-radius:100px; overflow:hidden;"><div style="width:75%; height:100%; background:#d9915f; border-radius:100px;"></div></div>
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#d9915f; margin-top:8px;">75% COMPLIANCE POSTURE — LIVE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:18px;">THE PROBLEM</div>
+        <h2 style="font-size:clamp(27px,5vw,36px); line-height:1.14; font-weight:700; letter-spacing:-.015em; margin:0; text-wrap:pretty;">Government compliance was never designed to be read by one person.</h2>
+      </div>
+      <div style="font-size:16.5px; line-height:1.72; color:#5c4a38;">
+        <p style="margin:0 0 18px;">Federal obligations are fragmented across the FAR, DFARS, NIST frameworks, OPM guidance, and executive orders — interlinked by cross-references and constantly changing. A single contract can carry dozens of clauses, each pulling in its own control framework, and generic GRC platforms built for SOC 2 checklists simply don't see them.</p>
+        <p style="margin:0;">The traditional answer is consultants reading contracts line by line: weeks of billable review that misses obscure clauses and is stale the moment a regulation updates. That is the gap ClauseAtlas was built to close.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">HOW IT WORKS</div>
+    <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0 0 34px;">From contract to living compliance map.</h2>
+    <div class="exp-grid-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px 28px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">01 · SCAN</div>
+        <h3 style="font-size:18px; font-weight:700; margin:0 0 10px;">Ingest your documents</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Contracts, SOWs, RFPs, awards, and modifications — PDF, Word, or scanned. ClauseAtlas reads them the way a contracts attorney would, at machine speed.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px 28px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">02 · EXTRACT</div>
+        <h3 style="font-size:18px; font-weight:700; margin:0 0 10px;">Surface every clause</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Every regulatory clause is identified and catalogued — including the flow-downs and cross-references buried in incorporated documents that manual review misses.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px 28px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">03 · MAP</div>
+        <h3 style="font-size:18px; font-weight:700; margin:0 0 10px;">Connect clauses to controls</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Each clause maps to the specific controls it invokes — DFARS 252.204-7012 to the 110 controls of NIST 800-171, and on across 28 regulation families.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px 28px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">04 · TRACK</div>
+        <h3 style="font-size:18px; font-weight:700; margin:0 0 10px;">Watch posture live</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Your compliance posture becomes a living dashboard — gaps prioritized, evidence tracked, and requirements updated as regulations change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">CAPABILITIES</div>
+    <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0 0 34px;">Built for the regulations that gate the federal market.</h2>
+    <div class="exp-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Compliance matrix generation</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Requirement matrices generated automatically — every identified clause mapped to its implementation obligations, evidence requirements, and audit verification standards.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Plain-language translation</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Regulatory text converted into actionable guidance. Your engineering team gets an implementation roadmap, not legal language that needs an interpreter.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Gap identification</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Contract requirements compared against your current posture, so remediation effort and budget go to the gaps that actually block award or authorization.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Cross-reference resolution</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Federal regulation is a web, not a list. ClauseAtlas follows the cross-references — clause to framework to control — so nothing incorporated by reference gets missed.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Regulatory change monitoring</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">The regulatory base is maintained continuously — when a rule changes or a new requirement lands, affected obligations in your portfolio are flagged.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Audit-ready evidence</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Posture tracking is organized around what assessors verify — so audit preparation is an export, not a fire drill.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM + PRACTICE ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div class="exp-card" style="background:#221710; color:#f7f2e9; border:1px solid #221710; border-radius:16px; padding:44px 48px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; right:0; width:280px; height:100%; background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size:40px 40px; pointer-events:none;"></div>
+      <div style="position:relative; display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap;">
+        <div style="max-width:64ch;">
+          <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#d9915f; margin-bottom:14px;">PLATFORM + PRACTICE</div>
+          <h2 style="font-size:clamp(23px,4.5vw,28px); font-weight:700; letter-spacing:-.01em; margin:0 0 12px; line-height:1.2;">The engine behind our Pre-Qualification practice.</h2>
+          <p style="font-size:15.5px; line-height:1.66; color:#c9b89d; margin:0;">ClauseAtlas isn't software we resell — it's how Exprima delivers. Every qualification engagement runs on it, pairing 25 years of federal program judgment with a platform that never misses a clause. You get both: the map and the guide.</p>
+        </div>
+        <a class="exp-cta" href="/practice/#pre-qualification" style="flex-shrink:0; font-size:15px; font-weight:700; color:#d9915f; border:2px solid #d9915f; padding:14px 26px; border-radius:8px;">The practice →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:80px 40px;">
+    <div class="exp-cta-box" style="background:#c05621; border-radius:18px; padding:64px 56px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:52px 52px; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <h2 style="font-size:clamp(29px,6vw,40px); font-weight:700; letter-spacing:-.02em; color:#fff; margin:0 auto 16px; max-width:24ch; line-height:1.1;">See your contracts through ClauseAtlas.</h2>
+        <p style="font-size:17px; line-height:1.6; color:#ffe9db; margin:0 auto 32px; max-width:52ch;">Bring a contract to a 30-minute call and we'll show you what's actually in it — every clause, every control, every gap.</p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="display:inline-block; background:#fffdf8; color:#2b1d12; padding:17px 40px; border-radius:8px; font-size:15px; font-weight:700;">Schedule a strategy call</a>
+          <a class="exp-cta" href="https://www.clauseatlas.com" style="display:inline-block; border:2px solid #fffdf8; color:#fff; padding:16px 34px; border-radius:8px; font-size:15px; font-weight:700;">clauseatlas.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#221710; color:#c9b89d;">
+    <div class="exp-pad exp-grid-footer" style="max-width:1240px; margin:0 auto; padding:56px 40px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:22px; font-weight:800; letter-spacing:.04em; color:#f7f2e9;">Exprima</div>
+        <p style="font-size:13.5px; line-height:1.6; margin:14px 0 0; max-width:34ch;">Federal market advisory &amp; consulting. Qualification, capture, and post-award operations for companies entering the public sector.</p>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">PRACTICE</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/practice/#pre-qualification">Pre-Qualification</a><a href="/practice/#business-development">Business Development</a><a href="/practice/#post-award">Post-Award Operations</a><a href="/practice/#fractional-executive">Fractional Executive</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">FIRM</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/clauseatlas/">ClauseAtlas</a><a href="/investors/">For Investors</a><a href="/firm/">The Firm</a><a href="https://calendly.com/elliott-mattice-exprima/30min">Schedule a call</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">CONTACT</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="mailto:contact@exprima.io">contact@exprima.io</a><span>Alameda, California</span><a href="https://www.linkedin.com/company/exprima">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #3a2a1c;"><div class="exp-pad" style="max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:#8a7460;"><span>© 2026 EXPRIMA. ALL RIGHTS RESERVED. · <a href="/credits/">CREDITS</a></span><span>37.7652° N, 122.2416° W</span></div></div>
+  </footer>
+
+</div>
+</body>
+</html>

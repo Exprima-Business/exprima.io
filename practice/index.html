@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice — Exprima</title>
+<meta name="description" content="Exprima's four practice areas: Pre-Qualification, Business Development, Post-Award Operations, and Fractional Executive — one partner across the full federal lifecycle.">
+<meta property="og:title" content="Practice — Exprima">
+<meta property="og:description" content="Qualification, capture, and post-award operations, run as one continuous discipline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.exprima.io/practice/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#f7f2e9; font-family:'Libre Franklin',sans-serif; color:#2b1d12; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { opacity:.75; }
+  .exp-nav-link { position:relative; }
+  .exp-nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#c05621; transition:width .25s ease; }
+  .exp-nav-link:hover::after { width:100%; }
+  .exp-nav-active { color:#c05621; }
+  .exp-nav-active::after { width:100%; }
+  .exp-cta { transition:transform .18s ease, box-shadow .18s ease; }
+  .exp-cta:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(192,86,33,.28); opacity:1; }
+  .exp-card { transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .exp-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px rgba(43,29,18,.12); border-color:#c9b89d; }
+  .exp-list { list-style:none; padding:0; margin:0; }
+  .exp-list li { position:relative; padding-left:26px; margin-bottom:12px; font-size:15px; line-height:1.62; color:#5c4a38; }
+  .exp-list li::before { content:'→'; position:absolute; left:0; color:#c05621; font-weight:700; }
+  @keyframes expRise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .exp-grid-split { grid-template-columns:1fr !important; }
+  }
+  @media (max-width: 900px) {
+    .exp-nav-links { display:none !important; }
+  }
+  @media (max-width: 860px) {
+    .exp-grid-2, .exp-grid-3 { grid-template-columns:1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .exp-pad { padding-left:22px !important; padding-right:22px !important; }
+    .exp-grid-footer { grid-template-columns:1fr 1fr !important; }
+    .exp-cta-box { padding:44px 26px !important; }
+  }
+  @media (max-width: 480px) {
+    .exp-grid-footer { grid-template-columns:1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div style="max-width:100%; overflow-x:hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(247,242,233,.92); backdrop-filter:blur(10px); border-bottom:1px solid #e3dac9;">
+    <div class="exp-pad" style="max-width:1240px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 40px;">
+      <a href="/" style="display:flex; align-items:baseline; gap:16px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-size:23px; font-weight:800; letter-spacing:.04em;">Exprima</span>
+        <span style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460;">FEDERAL MARKET ADVISORY</span>
+      </a>
+      <div style="display:flex; gap:30px; align-items:center; font-size:14px; font-weight:600; color:#5c4a38;">
+        <div class="exp-nav-links" style="display:flex; gap:30px; align-items:center;">
+          <a class="exp-nav-link exp-nav-active" href="/practice/">Practice</a>
+          <a class="exp-nav-link" href="/clauseatlas/">ClauseAtlas</a>
+          <a class="exp-nav-link" href="/investors/">For Investors</a>
+          <a class="exp-nav-link" href="/firm/">The Firm</a>
+        </div>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="background:#2b1d12; color:#f7f2e9; padding:12px 24px; border-radius:8px; font-size:13.5px; font-weight:700;">Schedule a call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="exp-pad" style="max-width:1240px; margin:0 auto; padding:76px 40px 36px;">
+    <div style="max-width:820px; animation:expRise .6s ease both;">
+      <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#c05621; margin-bottom:26px;">PRACTICE — QUALIFICATION → CAPTURE → DELIVERY</div>
+      <h1 style="font-size:clamp(34px,5.5vw,52px); line-height:1.06; font-weight:700; letter-spacing:-.02em; margin:0; text-wrap:pretty;">One discipline, <span style="color:#c05621;">four practices.</span></h1>
+      <p style="font-size:17px; line-height:1.68; color:#5c4a38; margin:26px 0 0; max-width:62ch;">Most firms hand the federal journey to a chain of specialists who each own one slice — and lose the thread at every handoff. Exprima runs qualification, capture, and delivery as a single continuous engagement, with retained executive leadership holding it all together.</p>
+    </div>
+  </header>
+
+  <!-- ============ PRACTICE INDEX STRIP ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:0 40px 28px;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; font-family:'Spline Sans Mono',monospace; font-size:12px;">
+      <a href="#pre-qualification" style="border:1px solid #e3dac9; background:#fffdf8; padding:9px 16px; border-radius:100px; color:#5c4a38;">01 · PRE-QUALIFICATION</a>
+      <a href="#business-development" style="border:1px solid #e3dac9; background:#fffdf8; padding:9px 16px; border-radius:100px; color:#5c4a38;">02 · BUSINESS DEVELOPMENT</a>
+      <a href="#post-award" style="border:1px solid #e3dac9; background:#fffdf8; padding:9px 16px; border-radius:100px; color:#5c4a38;">03 · POST-AWARD OPERATIONS</a>
+      <a href="#fractional-executive" style="border:1px solid #e3dac9; background:#fffdf8; padding:9px 16px; border-radius:100px; color:#5c4a38;">04 · FRACTIONAL EXECUTIVE</a>
+    </div>
+  </section>
+
+  <!-- ============ 01 PRE-QUALIFICATION ============ -->
+  <section id="pre-qualification" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:56px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;">
+      <div>
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:14px; font-weight:600; color:#c05621;">01</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.14em; color:#a8977f;">QUALIFY</span></div>
+        <h2 style="font-size:clamp(26px,4.5vw,34px); font-weight:700; letter-spacing:-.015em; margin:0 0 16px;">Pre-Qualification</h2>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 16px;">The federal market is gated by technical qualifications that take most companies months — sometimes years — to satisfy. We prepare, implement, and capture those qualifications: FedRAMP, SOC 2, and the broader body of federal regulatory requirements that determines whether you are even allowed to compete.</p>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 22px;">Every engagement runs on <a href="/clauseatlas/" style="color:#c05621; font-weight:600;">ClauseAtlas</a>, our compliance platform purpose-built for government regulation — so clause analysis that takes consultancies weeks happens in minutes, and your compliance posture is tracked in real time rather than rediscovered at audit.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">FedRAMP</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">SOC 2 Type I/II</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">NIST 800-171/53</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">CMMC L2/L3</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">DoD ATO</span>
+        </div>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:34px 32px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.16em; color:#8a7460; margin-bottom:18px;">WHAT WE DELIVER</div>
+        <ul class="exp-list">
+          <li><strong>Gap assessment &amp; roadmap</strong> — current posture against the framework that gates your market, with a prioritized, sequenced remediation plan</li>
+          <li><strong>Authorization pathway strategy</strong> — FedRAMP route selection, CMMC level determination, and timing decisions made with the endgame in view</li>
+          <li><strong>Documentation &amp; evidence architecture</strong> — SSPs, policies, and control evidence built the way assessors actually verify them</li>
+          <li><strong>Assessor coordination</strong> — 3PAO and C3PAO engagement, mock assessments, and finding remediation through authorization</li>
+          <li><strong>Continuous monitoring</strong> — posture tracked live on ClauseAtlas after the certificate, not rebuilt from scratch each cycle</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 BUSINESS DEVELOPMENT ============ -->
+  <section id="business-development" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:64px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;">
+      <div>
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:14px; font-weight:600; color:#c05621;">02</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.14em; color:#a8977f;">CAPTURE</span></div>
+        <h2 style="font-size:clamp(26px,4.5vw,34px); font-weight:700; letter-spacing:-.015em; margin:0 0 16px;">Business Development</h2>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 16px;">Federal capture is relationship-driven, calendar-driven, and unforgiving of missed windows. We run every phase of federal business development — from standing up a government business unit inside a commercial company, to qualifying the pipeline, to full proposal operations when the RFP drops.</p>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 22px;">This is not advisory-from-a-distance. We build the capture plan, work the relationships alongside your team, and manage proposals through color-team reviews and orals — the same discipline the incumbents use, brought to companies entering the market.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">Federal BU build-out</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">Capture management</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">Proposal operations</span>
+        </div>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:34px 32px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.16em; color:#8a7460; margin-bottom:18px;">WHAT WE DELIVER</div>
+        <ul class="exp-list">
+          <li><strong>Federal market strategy</strong> — where you actually fit: agencies, vehicles, set-asides, and the realistic path from first contract to franchise</li>
+          <li><strong>Government business unit build-out</strong> — structure, processes, and hiring plans for a federal arm inside a commercial company</li>
+          <li><strong>Capture management</strong> — opportunity qualification, teaming strategy, and customer engagement backed by industry relationships</li>
+          <li><strong>Proposal management</strong> — volume writing, compliance matrices, color-team reviews, and oral presentation preparation</li>
+          <li><strong>Pipeline discipline</strong> — bid/no-bid rigor so you spend your B&amp;P dollars where you can win</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 POST-AWARD ============ -->
+  <section id="post-award" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:64px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;">
+      <div>
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:14px; font-weight:600; color:#c05621;">03</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.14em; color:#a8977f;">DELIVER</span></div>
+        <h2 style="font-size:clamp(26px,4.5vw,34px); font-weight:700; letter-spacing:-.015em; margin:0 0 16px;">Post-Award Operations</h2>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 16px;">Winning is the start, not the finish. Post-award compliance failures can unwind everything the first two phases built — and commercial teams routinely underestimate how different delivering for the government is from delivering for enterprise customers.</p>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 22px;">We keep contract operations compliant, hold service delivery to the standard the government is grading you on, and help your team internalize GovCon culture — deliverable cadences, contracting officer relationships, and the paperwork that protects your contract — without losing commercial momentum.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">Compliance ops</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">Service quality</span>
+          <span style="font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px;">GovCon culture</span>
+        </div>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:34px 32px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.16em; color:#8a7460; margin-bottom:18px;">WHAT WE DELIVER</div>
+        <ul class="exp-list">
+          <li><strong>Contract compliance operations</strong> — flow-down obligations, reporting requirements, and clause-level tracking run on ClauseAtlas</li>
+          <li><strong>Continuous authorization upkeep</strong> — ConMon, POA&amp;M management, and re-assessment readiness so qualifications never lapse</li>
+          <li><strong>Service delivery quality</strong> — QASP-aligned performance management and the metrics your contracting officer actually reviews</li>
+          <li><strong>GovCon operating rhythm</strong> — CDRLs, invoicing discipline, and government-customer communication norms embedded in your team</li>
+          <li><strong>Growth on contract</strong> — option-year positioning, CPARS excellence, and past performance you can bid with</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 FRACTIONAL EXECUTIVE ============ -->
+  <section id="fractional-executive" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:64px 40px 20px;">
+    <div class="exp-card" style="background:#2b1d12; color:#f7f2e9; border:1px solid #4a3826; border-radius:16px; padding:48px 46px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; right:0; width:320px; height:100%; background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size:40px 40px; pointer-events:none;"></div>
+      <div class="exp-grid-split" style="position:relative; display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;">
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:14px; font-weight:600; color:#d9915f;">04</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.14em; color:#a8977f;">RETAINED</span></div>
+          <h2 style="font-size:clamp(26px,4.5vw,34px); font-weight:700; letter-spacing:-.015em; margin:0 0 16px;">Fractional Executive</h2>
+          <p style="font-size:16px; line-height:1.7; color:#c9b89d; margin:0 0 16px;">Senior security and compliance leadership, embedded a few days a month — for organizations that need executive judgment across all three phases without the cost of a full-time hire.</p>
+          <p style="font-size:16px; line-height:1.7; color:#c9b89d; margin:0 0 22px;">This is the connective tissue of the whole practice: one retained executive who carries context from qualification through capture into delivery, sits in your leadership meetings, and answers to your board.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:12px; font-weight:600; color:#f7f2e9; background:#4a3826; padding:6px 12px; border-radius:100px;">Embedded CISO/CIO</span>
+            <span style="font-size:12px; font-weight:600; color:#f7f2e9; background:#4a3826; padding:6px 12px; border-radius:100px;">2–4 days/month</span>
+            <span style="font-size:12px; font-weight:600; color:#f7f2e9; background:#4a3826; padding:6px 12px; border-radius:100px;">Board reporting</span>
+          </div>
+        </div>
+        <div style="border:1px solid #4a3826; background:rgba(255,255,255,.03); border-radius:14px; padding:32px 30px;">
+          <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.16em; color:#b9a893; margin-bottom:18px;">WHAT WE DELIVER</div>
+          <ul class="exp-list" style="--tick:#d9915f;">
+            <li style="color:#c9b89d;"><strong style="color:#f7f2e9;">Embedded security &amp; compliance leadership</strong> — CISO/CIO-level judgment inside your organization, on a fractional footprint</li>
+            <li style="color:#c9b89d;"><strong style="color:#f7f2e9;">Risk management &amp; prioritization</strong> — threat modeling, risk quantification, and an investment roadmap aligned to business objectives</li>
+            <li style="color:#c9b89d;"><strong style="color:#f7f2e9;">Vendor &amp; supply chain security</strong> — third-party risk assessment and dependency mapping for the standards the government holds you to</li>
+            <li style="color:#c9b89d;"><strong style="color:#f7f2e9;">Board &amp; executive reporting</strong> — risk communicated in business terms, with decision support when it counts</li>
+            <li style="color:#c9b89d;"><strong style="color:#f7f2e9;">Phase alignment</strong> — one owner making sure qualification, capture, and delivery never drift apart</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW ENGAGEMENTS RUN ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:80px 40px 20px;">
+    <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">HOW ENGAGEMENTS RUN</div>
+    <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0 0 34px;">Start anywhere on the route. We map the whole thing.</h2>
+    <div class="exp-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">STEP 1</div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Strategy call</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Thirty minutes to locate you on the route — what you sell, who in government buys it, and which gate is actually in front of you.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">STEP 2</div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Route map &amp; proposal</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">A concrete plan across the phases that apply to you — scope, sequencing, timeline, and the qualifications and vehicles that gate each step.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:13px; font-weight:600; color:#c05621; margin-bottom:12px;">STEP 3</div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Embedded delivery</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">We work inside your team — project-based for a single gate, or retained across the arc with fractional executive leadership.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:80px 40px;">
+    <div class="exp-cta-box" style="background:#c05621; border-radius:18px; padding:64px 56px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:52px 52px; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <h2 style="font-size:clamp(29px,6vw,40px); font-weight:700; letter-spacing:-.02em; color:#fff; margin:0 auto 16px; max-width:22ch; line-height:1.1;">Which gate is in front of you?</h2>
+        <p style="font-size:17px; line-height:1.6; color:#ffe9db; margin:0 auto 32px; max-width:52ch;">Start with a 30-minute strategy call. We'll locate you on the route and scope the practice areas that apply.</p>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="display:inline-block; background:#fffdf8; color:#2b1d12; padding:17px 40px; border-radius:8px; font-size:15px; font-weight:700;">Schedule a strategy call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#221710; color:#c9b89d;">
+    <div class="exp-pad exp-grid-footer" style="max-width:1240px; margin:0 auto; padding:56px 40px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:22px; font-weight:800; letter-spacing:.04em; color:#f7f2e9;">Exprima</div>
+        <p style="font-size:13.5px; line-height:1.6; margin:14px 0 0; max-width:34ch;">Federal market advisory &amp; consulting. Qualification, capture, and post-award operations for companies entering the public sector.</p>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">PRACTICE</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/practice/#pre-qualification">Pre-Qualification</a><a href="/practice/#business-development">Business Development</a><a href="/practice/#post-award">Post-Award Operations</a><a href="/practice/#fractional-executive">Fractional Executive</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">FIRM</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/clauseatlas/">ClauseAtlas</a><a href="/investors/">For Investors</a><a href="/firm/">The Firm</a><a href="https://calendly.com/elliott-mattice-exprima/30min">Schedule a call</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">CONTACT</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="mailto:contact@exprima.io">contact@exprima.io</a><span>Alameda, California</span><a href="https://www.linkedin.com/company/exprima">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #3a2a1c;"><div class="exp-pad" style="max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:#8a7460;"><span>© 2026 EXPRIMA. ALL RIGHTS RESERVED. · <a href="/credits/">CREDITS</a></span><span>37.7652° N, 122.2416° W</span></div></div>
+  </footer>
+
+</div>
+</body>
+</html>

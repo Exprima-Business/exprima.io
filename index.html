@@ -1,566 +1,453 @@
----
-layout: default
-title: Exprima - Upstream Risk Translation Applied
----
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exprima — Federal Market Advisory</title>
+<meta name="description" content="Exprima moves dual-use startups and commercial companies into the government market — and keeps them there. Qualification, capture, and post-award operations, run as one continuous discipline.">
+<meta property="og:title" content="Exprima — Federal Market Advisory">
+<meta property="og:description" content="Your path into the public sector, managed end to end. Qualification, capture, and post-award operations for companies entering the government market.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.exprima.io">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-    /* Hero Section */
-    .hero {
-        padding: 100px 0 80px;
-        background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-    }
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#f7f2e9; font-family:'Libre Franklin',sans-serif; color:#2b1d12; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { opacity:.75; }
+  .exp-nav-link { position:relative; }
+  .exp-nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#c05621; transition:width .25s ease; }
+  .exp-nav-link:hover::after { width:100%; }
+  .exp-cta { transition:transform .18s ease, box-shadow .18s ease; }
+  .exp-cta:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(192,86,33,.28); opacity:1; }
+  .exp-card { transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .exp-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px rgba(43,29,18,.12); border-color:#c9b89d; }
+  @keyframes expRise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 
-    .hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: -0.03em;
-        margin-bottom: 20px;
-        line-height: 1.1;
-    }
+  /* Hero slideshow */
+  .exp-slide-media { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:sepia(.42) hue-rotate(-6deg) saturate(1.12) brightness(.53) contrast(1.1); }
+  .exp-kb-base { animation:expKbBase 40s ease-in-out infinite; }
+  @keyframes expKbBase { 0%,100% { transform:scale(1.04); } 50% { transform:scale(1.13); } }
+  .exp-slide { opacity:0; animation-duration:20s; animation-timing-function:linear; animation-iteration-count:infinite; }
+  .exp-slide-a { animation-name:expSlideA; }
+  .exp-slide-b { animation-name:expSlideB; }
+  @keyframes expSlideA { 0% { opacity:0; transform:scale(1.0); } 6% { opacity:1; } 25% { opacity:1; } 31% { opacity:0; transform:scale(1.10); } 100% { opacity:0; transform:scale(1.10); } }
+  @keyframes expSlideB { 0% { opacity:0; transform:scale(1.12); } 6% { opacity:1; } 25% { opacity:1; } 31% { opacity:0; transform:scale(1.02); } 100% { opacity:0; transform:scale(1.02); } }
+  .exp-glow { position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 50% 42%, rgba(217,145,95,.16) 0%, rgba(217,145,95,.05) 30%, rgba(217,145,95,0) 55%); animation:expGlow 6s ease-in-out infinite alternate; }
+  @keyframes expGlow { from { opacity:.7; } to { opacity:1; } }
+  @media (max-width: 860px) {
+    .exp-glow { background:radial-gradient(circle at 50% 36%, rgba(217,145,95,.16) 0%, rgba(217,145,95,.05) 30%, rgba(217,145,95,0) 55%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .exp-slide { display:none !important; }
+    .exp-kb-base, .exp-glow { animation:none !important; }
+  }
 
-    .hero-tagline {
-        font-family: var(--font-mono);
-        font-size: 0.9rem;
-        color: var(--slate-light);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 24px;
-    }
+  /* Practice rail & stage */
+  .exp-rb { display:grid; grid-template-columns:280px 1fr; gap:40px; align-items:stretch; }
+  .exp-rail { display:flex; flex-direction:column; border-left:2px solid #e3dac9; }
+  .exp-ritem { position:relative; text-align:left; background:none; border:none; cursor:pointer; padding:20px 22px; font-family:inherit; color:#8a7460; transition:color .2s ease; }
+  .exp-ritem .exp-rnum { font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.12em; display:block; margin-bottom:4px; color:#a8977f; }
+  .exp-ritem .exp-rt { font-size:17.5px; font-weight:700; letter-spacing:-.01em; }
+  .exp-ritem::before { content:''; position:absolute; left:-2px; top:0; width:2px; height:100%; background:transparent; }
+  .exp-ritem.on { color:#2b1d12; }
+  .exp-ritem.on::before { background:#c05621; }
+  .exp-ritem.on .exp-rnum { color:#c05621; }
+  .exp-ritem.on .exp-rprog { position:absolute; left:-2px; top:0; width:2px; background:#d9915f; animation:expProgV 4.2s linear forwards; }
+  @keyframes expProgV { from { height:0; } to { height:100%; } }
+  @keyframes expProgH { from { width:0; } to { width:100%; } }
+  .exp-stage { position:relative; border:1px solid #e3dac9; background:#fffdf8; border-radius:16px; overflow:hidden; min-height:520px; }
+  .exp-spanel { position:absolute; inset:0; display:flex; flex-direction:column; opacity:0; transform:translateX(18px); transition:opacity .35s ease, transform .35s ease; pointer-events:none; }
+  .exp-spanel.on { opacity:1; transform:none; pointer-events:auto; }
+  .exp-simg { height:185px; overflow:hidden; flex-shrink:0; }
+  .exp-simg img { width:100%; height:100%; object-fit:cover; filter:sepia(.32) hue-rotate(-6deg) saturate(1.08) brightness(.8) contrast(1.05); display:block; }
+  .exp-sbody { padding:26px 32px 28px; display:flex; flex-direction:column; flex:1; }
+  .exp-sphase { font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.16em; color:#c05621; margin-bottom:8px; }
+  .exp-stitle { font-size:24px; font-weight:700; margin-bottom:10px; }
+  .exp-sdesc { font-size:15px; line-height:1.6; color:#5c4a38; max-width:64ch; margin:0; }
+  .exp-stags { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .exp-stags span { font-size:12px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:6px 12px; border-radius:100px; }
+  .exp-slink { margin-top:auto; padding-top:16px; font-size:14px; font-weight:700; color:#c05621; }
+  @media (max-width: 860px) {
+    .exp-rb { grid-template-columns:1fr; gap:18px; }
+    .exp-rail { flex-direction:row; border-left:none; border-bottom:2px solid #e3dac9; }
+    .exp-ritem { flex:1; padding:12px 4px 14px; text-align:center; }
+    .exp-ritem .exp-rt { display:none; }
+    .exp-ritem .exp-rnum { margin-bottom:0; font-size:9.5px; letter-spacing:.06em; }
+    .exp-ritem::before { left:0; right:0; top:auto; bottom:-2px; width:auto; height:2px; }
+    .exp-ritem.on .exp-rprog { left:0; top:auto; bottom:-2px; width:0; height:2px; animation:expProgH 4.2s linear forwards; }
+    .exp-stage { min-height:600px; }
+  }
+  @media (max-width: 480px) {
+    .exp-stage { min-height:710px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .exp-ritem.on .exp-rprog { display:none; }
+    .exp-spanel { transition:none !important; }
+  }
 
-    .hero-description {
-        font-size: 1.25rem;
-        line-height: 1.6;
-        color: var(--text-secondary);
-        margin-bottom: 40px;
-        max-width: 800px;
-    }
+  /* Hero photo treatment */
+  .exp-hero-dim {
+    background:
+      linear-gradient(180deg, rgba(34,23,16,.42) 0%, rgba(34,23,16,0) 26%, rgba(34,23,16,0) 62%, rgba(34,23,16,.88) 100%),
+      linear-gradient(90deg, rgba(34,23,16,.92) 0%, rgba(34,23,16,.72) 36%, rgba(34,23,16,.26) 58%, rgba(34,23,16,.05) 78%);
+  }
+  @media (max-width: 860px) {
+    .exp-hero-dim { background:linear-gradient(180deg, rgba(34,23,16,.55) 0%, rgba(34,23,16,.62) 60%, rgba(34,23,16,.9) 100%); }
+    .exp-hero-content { padding-top:84px !important; padding-bottom:150px !important; }
+  }
 
-    .hero-cta {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-    }
-
-    .btn-primary {
-        font-family: var(--font-mono);
-        font-size: 0.9rem;
-        padding: 14px 28px;
-        background: var(--slate-primary);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 6px;
-        transition: all 0.2s;
-        display: inline-block;
-    }
-
-    .btn-primary:hover {
-        background: var(--slate-light);
-        transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-        font-family: var(--font-mono);
-        font-size: 0.9rem;
-        padding: 14px 28px;
-        background: transparent;
-        color: var(--text-primary);
-        text-decoration: none;
-        border: 1px solid var(--border-color);
-        border-radius: 6px;
-        transition: all 0.2s;
-        display: inline-block;
-    }
-
-    .btn-secondary:hover {
-        border-color: var(--slate-light);
-        color: var(--slate-light);
-    }
-
-    /* Section Styles */
-    .section {
-        padding: 80px 0;
-    }
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .section-label {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        color: var(--slate-light);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 12px;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-        letter-spacing: -0.02em;
-    }
-
-    .section-description {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        max-width: 700px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    /* Cards */
-    .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 28px;
-    }
-
-    .card {
-        background: var(--bg-card);
-        border: 1px solid var(--border-subtle);
-        border-left: 3px solid var(--slate-primary);
-        padding: 32px;
-        border-radius: 6px;
-        transition: all 0.2s;
-    }
-
-    .card:hover {
-        background: var(--bg-card-hover);
-        transform: translateY(-2px);
-    }
-
-    .card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 12px;
-        color: var(--text-primary);
-    }
-
-    .card p {
-        color: var(--text-secondary);
-        line-height: 1.6;
-        margin-bottom: 16px;
-    }
-
-    .card-link {
-        font-family: var(--font-mono);
-        font-size: 0.85rem;
-        color: var(--slate-light);
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 8px;
-    }
-
-    .card-link:hover {
-        text-decoration: underline;
-    }
-
-    /* Features List */
-    .features-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
-    }
-
-    .feature-item {
-        border-left: 2px solid var(--slate-primary);
-        padding-left: 20px;
-    }
-
-    .feature-item h4 {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-        color: var(--text-primary);
-    }
-
-    .feature-item p {
-        font-size: 0.95rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
-    }
-
-    /* Methodology Section */
-    .methodology-grid {
-        display: grid;
-        gap: 40px;
-        margin-top: 40px;
-    }
-
-    .methodology-item {
-        background: var(--bg-card);
-        border: 1px solid var(--border-subtle);
-        padding: 40px;
-        border-radius: 6px;
-    }
-
-    .methodology-number {
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
-        color: var(--slate-light);
-        margin-bottom: 8px;
-    }
-
-    .methodology-item h3 {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-    }
-
-    .methodology-item .subtitle {
-        font-style: italic;
-        color: var(--text-muted);
-        margin-bottom: 16px;
-    }
-
-    .methodology-item p {
-        color: var(--text-secondary);
-        line-height: 1.7;
-        margin-bottom: 16px;
-    }
-
-    .methodology-example {
-        background: var(--bg-secondary);
-        border-left: 3px solid var(--slate-primary);
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 4px;
-    }
-
-    .methodology-example strong {
-        color: var(--slate-light);
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    /* Industry Tags */
-    .industry-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-        margin-top: 32px;
-    }
-
-    .tag {
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
-        padding: 8px 16px;
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 20px;
-        color: var(--text-secondary);
-    }
-
-    /* Contact Section */
-    .contact-section {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-subtle);
-        border-radius: 8px;
-        padding: 60px;
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .contact-section h2 {
-        font-size: 2rem;
-        margin-bottom: 16px;
-    }
-
-    .contact-section p {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        margin-bottom: 32px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @media (max-width: 768px) {
-        .hero h1 { font-size: 2rem; }
-        .hero-description { font-size: 1.1rem; }
-        .section-title { font-size: 2rem; }
-        .card-grid { grid-template-columns: 1fr; }
-        .contact-section { padding: 40px 24px; }
-    }
+  /* Responsive */
+  @media (max-width: 980px) {
+    .exp-grid-hero, .exp-grid-pos, .exp-grid-firm { grid-template-columns:1fr !important; }
+    .exp-portrait { max-width:420px; }
+  }
+  @media (max-width: 900px) {
+    .exp-nav-links { display:none !important; }
+  }
+  @media (max-width: 860px) {
+    .exp-grid-2, .exp-grid-3 { grid-template-columns:1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .exp-pad { padding-left:22px !important; padding-right:22px !important; }
+    .exp-grid-footer { grid-template-columns:1fr 1fr !important; }
+    .exp-cta-box { padding:44px 26px !important; }
+  }
+  @media (max-width: 480px) {
+    .exp-grid-footer { grid-template-columns:1fr !important; }
+  }
 </style>
+</head>
+<body>
+<div style="max-width:100%; overflow-x:hidden;">
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-tagline">Upstream Risk Translation Applied</div>
-        <h1>AI-Powered Security & Governance<br>for Regulated Industries</h1>
-        <p class="hero-description">
-            Exprima provides fractional security executive services for organizations navigating 
-            complex regulatory environments. Built on Upstream Risk Translation methodology 
-            and enhanced by AI-powered tools, services deliver early warning advantage, smarter 
-            control design, and strategic risk assessment.
-        </p>
-        <div class="hero-cta">
-            <a href="#contact" class="btn-primary">Schedule Strategy Call</a>
-            <a href="/platform/" class="btn-secondary">Explore Platform & Tools</a>
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(247,242,233,.92); backdrop-filter:blur(10px); border-bottom:1px solid #e3dac9;">
+    <div class="exp-pad" style="max-width:1240px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 40px;">
+      <a href="/" style="display:flex; align-items:baseline; gap:16px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-size:23px; font-weight:800; letter-spacing:.04em;">Exprima</span>
+        <span style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460;">FEDERAL MARKET ADVISORY</span>
+      </a>
+      <div style="display:flex; gap:30px; align-items:center; font-size:14px; font-weight:600; color:#5c4a38;">
+        <div class="exp-nav-links" style="display:flex; gap:30px; align-items:center;">
+          <a class="exp-nav-link" href="/practice/">Practice</a>
+          <a class="exp-nav-link" href="/clauseatlas/">ClauseAtlas</a>
+          <a class="exp-nav-link" href="/investors/">For Investors</a>
+          <a class="exp-nav-link" href="/firm/">The Firm</a>
         </div>
-        
-        <div class="industry-tags">
-            <span class="tag">Defense Contractors</span>
-            <span class="tag">Healthcare</span>
-            <span class="tag">Financial Services</span>
-            <span class="tag">Critical Infrastructure</span>
-        </div>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="background:#2b1d12; color:#f7f2e9; padding:12px 24px; border-radius:8px; font-size:13.5px; font-weight:700;">Schedule a call</a>
+      </div>
     </div>
-</section>
+  </nav>
 
-<!-- Core Services -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Core Services</div>
-            <h2 class="section-title">Strategic Leadership Enhanced by AI</h2>
-            <p class="section-description">
-                Combining executive-level expertise with AI-powered tools to deliver 
-                comprehensive security and governance programs.
-            </p>
-        </div>
-
-        <div class="card-grid">
-            <div class="card">
-                <h3>Fractional Security Executive</h3>
-                <p>
-                    Strategic security leadership without the full-time executive salary. 
-                    Embedded 2-4 days per month to provide risk management, compliance oversight, 
-                    vendor assessment, and board-level reporting.
-                </p>
-                <a href="/services/#fractional-executive" class="card-link">Learn More →</a>
-            </div>
-
-            <div class="card">
-                <h3>AI Security & Governance</h3>
-                <p>
-                    Complete AI governance programs including shadow AI discovery, policy 
-                    enforcement, model security, and regulatory compliance (NIST AI RMF, 
-                    EU AI Act, sector-specific requirements).
-                </p>
-                <a href="/services/#ai-governance" class="card-link">Learn More →</a>
-            </div>
-
-            <div class="card">
-                <h3>Compliance Program Architecture</h3>
-                <p>
-                    Framework-driven GRC programs for CMMC, FedRAMP, HIPAA, SOC2, and PCI-DSS. 
-                    Controls designed to survive audits while maintaining operational velocity.
-                </p>
-                <a href="/services/#compliance" class="card-link">Learn More →</a>
-            </div>
-
-            <div class="card">
-                <h3>Strategic Risk Advisory</h3>
-                <p>
-                    Executive counsel on complex risk decisions including regulatory changes, 
-                    vendor risk assessment, M&A security due diligence, and authorization 
-                    pathway selection.
-                </p>
-                <a href="/services/#advisory" class="card-link">Learn More →</a>
-            </div>
-        </div>
+  <!-- ============ HERO ============ -->
+  <header style="position:relative; background:#221710; overflow:hidden;">
+    <!-- slide 4 / resting frame: US Capitol -->
+    <picture>
+      <source srcset="/assets/img/capitol-flag.webp" type="image/webp">
+      <img src="/assets/img/capitol-flag.jpg" alt="" aria-hidden="true" fetchpriority="high"
+           class="exp-slide-media exp-kb-base" style="object-position:50% 28%;">
+    </picture>
+    <div aria-hidden="true">
+      <!-- slide 1: transportation — DC Metro -->
+      <picture>
+        <source srcset="/assets/img/metro.webp" type="image/webp">
+        <img src="/assets/img/metro.jpg" alt="" decoding="async"
+             class="exp-slide-media exp-slide exp-slide-a" style="object-position:center 55%; animation-delay:5s;">
+      </picture>
+      <!-- slide 2: national security — the Pentagon -->
+      <picture>
+        <source srcset="/assets/img/pentagon.webp" type="image/webp">
+        <img src="/assets/img/pentagon.jpg" alt="" decoding="async"
+             class="exp-slide-media exp-slide exp-slide-b" style="object-position:center 40%; animation-delay:10s;">
+      </picture>
+      <!-- slide 3: civilian government — the White House -->
+      <picture>
+        <source srcset="/assets/img/whitehouse.webp" type="image/webp">
+        <img src="/assets/img/whitehouse.jpg" alt="" decoding="async"
+             class="exp-slide-media exp-slide exp-slide-a" style="object-position:center 60%; animation-delay:15s;">
+      </picture>
     </div>
-</section>
-
-<!-- Methodology Section -->
-<section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">The Differentiator</div>
-            <h2 class="section-title">Built on Upstream Risk Translation</h2>
-            <p class="section-description">
-                Exprima applies systematic frameworks created by founder Elliott Mattice over 
-                25 years of federal program leadership. These frameworks convert early-stage 
-                signals into strategic intelligence while decision margin still exists.
-            </p>
+    <div class="exp-glow" aria-hidden="true"></div>
+    <div class="exp-hero-dim" style="position:absolute; inset:0; pointer-events:none;"></div>
+    <div class="exp-pad exp-hero-content" style="position:relative; max-width:1240px; margin:0 auto; padding:110px 40px 180px;">
+      <div style="max-width:620px; animation:expRise .6s ease both;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#d9915f; margin-bottom:26px;">QUALIFICATION → CAPTURE → DELIVERY</div>
+        <h1 style="font-family:'Libre Franklin',sans-serif; font-size:clamp(34px,6vw,56px); line-height:1.05; font-weight:700; letter-spacing:-.02em; margin:0; color:#f7f2e9; text-wrap:pretty;">Your path into the public sector, <span style="color:#d9915f;">managed end to end.</span></h1>
+        <p style="font-size:17px; line-height:1.68; color:#c9b89d; margin:26px 0 0; max-width:54ch;">Exprima moves dual-use startups and commercial companies into the government market — and keeps them there. Qualification, capture, and post-award operations, run as one continuous discipline by people who have spent 25 years winning and delivering federal programs.</p>
+        <div style="display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;">
+          <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="background:#c05621; color:#fff; padding:16px 34px; border-radius:8px; font-size:14.5px; font-weight:700;">Schedule a strategy call</a>
+          <a class="exp-cta" href="/practice/" style="border:2px solid #f7f2e9; color:#f7f2e9; padding:15px 30px; border-radius:8px; font-size:14.5px; font-weight:700;">How we work</a>
         </div>
-
-        <div class="methodology-grid">
-            <div class="methodology-item">
-                <div class="methodology-number">Framework 01</div>
-                <h3>Policy Translation Method</h3>
-                <p class="subtitle">Read regulatory intent 6-12 months before publication</p>
-                <p>
-                    Most organizations wait for final regulations before preparing. Policy Translation 
-                    Method reads upstream signals in draft guidance, comment periods, and legislative 
-                    language to identify enforcement priorities early.
-                </p>
-                <div class="methodology-example">
-                    <strong>Applied to Client Work:</strong>
-                    <p style="margin-top: 8px;">
-                        When preparing defense contractors for CMMC certification, signals from DoD 
-                        guidance memos six months prior reveal priority enforcement areas. Compliance 
-                        programs are configured proactively using Clause Atlas tool to scan for these 
-                        anticipated requirements, creating 6-12 month preparation advantage.
-                    </p>
-                </div>
-            </div>
-
-            <div class="methodology-item">
-                <div class="methodology-number">Framework 02</div>
-                <h3>Geopolitical Risk Posture</h3>
-                <p class="subtitle">Assess vendor and supply chain through state actor lens</p>
-                <p>
-                    Traditional vendor risk focuses on SOC2 reports and security questionnaires. 
-                    Geopolitical Risk Posture adds analysis of supply chain dependencies, export 
-                    control signals, and procurement policy shifts driven by strategic competition.
-                </p>
-                <div class="methodology-example">
-                    <strong>Applied to Client Work:</strong>
-                    <p style="margin-top: 8px;">
-                        When assessing healthcare clients' AI model providers, analysis includes 
-                        data sovereignty concerns, export control implications, and alternative 
-                        vendor availability. ZeroTrusted.ai platform monitors model dependencies 
-                        and flags geopolitical risk exposure in real-time.
-                    </p>
-                </div>
-            </div>
-
-            <div class="methodology-item">
-                <div class="methodology-number">Framework 03</div>
-                <h3>Incentive Analysis for Control Design</h3>
-                <p class="subtitle">Design controls aligned with stakeholder motivations</p>
-                <p>
-                    Generic compliance templates fail audits and create operational friction. Incentive 
-                    Analysis designs controls based on how auditors actually verify, how engineers 
-                    actually work, and what executives actually prioritize—maximizing both audit 
-                    success and operational acceptance.
-                </p>
-                <div class="methodology-example">
-                    <strong>Applied to Client Work:</strong>
-                    <p style="margin-top: 8px;">
-                        When implementing AI governance programs, ZeroTrusted.ai platform policies 
-                        are configured to align with team workflows rather than blocking them. 
-                        Shadow AI is redirected through governed channels instead of prohibited outright. 
-                        Result: 90%+ audit pass rates with high operational adoption.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 60px;">
-            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 20px;">
-                Complete framework documentation and case studies available at:
-            </p>
-            <a href="https://elliottmattice.work/frameworks" target="_blank" class="btn-secondary">
-                View Methodology Documentation →
-            </a>
-        </div>
+      </div>
     </div>
-</section>
+  </header>
 
-<!-- Platform & Tools -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">AI-Powered Delivery</div>
-            <h2 class="section-title">Tools That Enhance Methodology Application</h2>
-            <p class="section-description">
-                Exprima uses proprietary and partner AI tools to deliver faster, more comprehensive 
-                results while applying Upstream Risk Translation frameworks.
-            </p>
-        </div>
-
-        <div class="features-list">
-            <div class="feature-item">
-                <h4>Clause Atlas (Proprietary)</h4>
-                <p>
-                    AI-powered regulatory scanning engine that automates Policy Translation Method. 
-                    Scans contracts and documents for 10,000+ regulations including FAR, DFARS, 
-                    NIST, CMMC, and AI-specific requirements that traditional platforms miss.
-                </p>
-            </div>
-
-            <div class="feature-item">
-                <h4>Proposal Atlas (Proprietary)</h4>
-                <p>
-                    Multi-model AI proposal generation system applying Incentive Analysis frameworks. 
-                    Seven AI models collaborate in parallel debate architecture, with synthetic 
-                    evaluators reviewing output for compliance and competitive optimization.
-                </p>
-            </div>
-
-            <div class="feature-item">
-                <h4>ZeroTrusted.ai Platform (Partner)</h4>
-                <p>
-                    Enterprise AI governance platform providing AI Firewall, AI Gateway, and AI 
-                    Health Check capabilities. Configured using Incentive Analysis to enforce 
-                    policies teams actually follow while maintaining full compliance and audit trails.
-                </p>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="/platform/" class="btn-primary">Explore Platform Capabilities →</a>
-        </div>
+  <!-- ============ GRAVITAS BAND ============ -->
+  <section style="background:#221710; color:#f7f2e9;">
+    <div class="exp-pad" style="max-width:1240px; margin:0 auto; padding:30px 40px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
+      <div style="display:flex; gap:56px; flex-wrap:wrap;">
+        <div><span class="exp-count" data-target="40" data-suffix="+" style="font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800;">40+</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; color:#b9a893; margin-left:12px;">FEDERAL AUTHORIZATIONS</span></div>
+        <div><span class="exp-count" data-target="350" data-prefix="$" data-suffix="M+" style="font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800;">$350M+</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; color:#b9a893; margin-left:12px;">PORTFOLIO MANAGED</span></div>
+        <div><span class="exp-count" data-target="25" data-suffix=" yrs" style="font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800;">25 yrs</span><span style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; color:#b9a893; margin-left:12px;">FEDERAL PROGRAM LEADERSHIP</span></div>
+      </div>
+      <span style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; color:#d9915f; letter-spacing:.14em;">ALAMEDA, CALIFORNIA</span>
     </div>
-</section>
+  </section>
 
-<!-- Track Record -->
-<section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Proven Results</div>
-            <h2 class="section-title">High-Consequence Environments</h2>
+  <!-- ============ POSITIONING ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:88px 40px 20px;">
+    <div class="exp-grid-pos" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:18px;">WHY EXPRIMA</div>
+        <h2 style="font-size:clamp(27px,5vw,36px); line-height:1.14; font-weight:700; letter-spacing:-.015em; margin:0; text-wrap:pretty;">Turning agency interest into contracted revenue.</h2>
+      </div>
+      <div style="font-size:16.5px; line-height:1.72; color:#5c4a38;">
+        <p style="margin:0 0 18px;">Companies typically come to Exprima with a strong product, genuine interest from a government customer, and no award yet. Closing that gap is the firm's core work. We chart the fastest credible route to a first contract and execute it together — qualification, capture, and delivery in a single engagement — without the cost of standing up a government division before the revenue exists.</p>
+        <p style="margin:0;">That work is grounded in 25 years of winning and delivering federal programs across defense, homeland security, federal health, and civilian agencies: more than 40 authorizations earned, $350M in programs delivered, and sustained work alongside the program executives, authorizing officials, and contracting officers who make the decisions. The same experience shapes every recommendation we make — including, when warranted, the recommendation not to pursue.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;">
+          <span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.08em; color:#5c4a38; background:#f1ead9; padding:8px 15px; border-radius:100px;">DEFENSE &amp; NATIONAL SECURITY</span>
+          <span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.08em; color:#5c4a38; background:#f1ead9; padding:8px 15px; border-radius:100px;">HOMELAND SECURITY</span>
+          <span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.08em; color:#5c4a38; background:#f1ead9; padding:8px 15px; border-radius:100px;">FEDERAL HEALTH</span>
+          <span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.08em; color:#5c4a38; background:#f1ead9; padding:8px 15px; border-radius:100px;">CIVILIAN AGENCIES</span>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; text-align: center; margin-top: 40px;">
-            <div>
-                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">40+</div>
-                <div style="color: var(--text-secondary);">Federal Authorizations</div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">FedRAMP, CMMC, DoD ATOs</div>
-            </div>
-            <div>
-                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">$350M+</div>
-                <div style="color: var(--text-secondary);">Portfolio Value</div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Programs managed across defense, healthcare, federal</div>
-            </div>
-            <div>
-                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">90%+</div>
-                <div style="color: var(--text-secondary);">Audit Pass Rate</div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">vs. 60% industry average</div>
-            </div>
-            <div>
-                <div style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--slate-light); margin-bottom: 8px;">25+</div>
-                <div style="color: var(--text-secondary);">Years Experience</div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Federal program leadership</div>
-            </div>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.7;">
-                Organizations served include federal agencies (TSA, DCSA, DoD), defense contractors 
-                (prime and subcontractors), healthcare enterprises (VA/DoD healthcare systems), 
-                and technology companies navigating federal authorization pathways.
-            </p>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="section" id="contact">
-    <div class="container">
-        <div class="contact-section">
-            <h2>Ready to Apply Upstream Risk Translation?</h2>
-            <p>
-                Schedule a strategy call to discuss how systematic frameworks and AI-powered tools 
-                can address your organization's security and governance challenges.
-            </p>
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://calendly.com/elliott-mattice-exprima/30min" target="_blank" class="btn-primary">
-                    Schedule 30-Minute Call
-                </a>
-                <a href="mailto:contact@exprima.io" class="btn-secondary">
-                    Email: contact@exprima.io
-                </a>
-            </div>
-            <p style="margin-top: 28px; font-size: 0.95rem; color: var(--text-muted);">
-                Phone: (202) 262-4088 · Based in Alameda, CA · Serving organizations nationwide
-            </p>
-        </div>
+  <!-- ============ PRACTICE AREAS ============ -->
+  <section id="practice" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:64px 40px 20px;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:18px;">
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">PRACTICE AREAS</div>
+        <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0;">One partner across the full lifecycle.</h2>
+      </div>
+      <a class="exp-nav-link" href="/practice/" style="font-size:14px; font-weight:700; color:#c05621; flex-shrink:0;">All services →</a>
     </div>
-</section>
+    <div class="exp-rb" id="expRb">
+      <div class="exp-rail">
+        <button class="exp-ritem on" type="button"><span class="exp-rprog"></span><span class="exp-rnum">01 · QUALIFY</span><span class="exp-rt">Pre-Qualification</span></button>
+        <button class="exp-ritem" type="button"><span class="exp-rnum">02 · CAPTURE</span><span class="exp-rt">Business Development</span></button>
+        <button class="exp-ritem" type="button"><span class="exp-rnum">03 · DELIVER</span><span class="exp-rt">Post-Award Operations</span></button>
+        <button class="exp-ritem" type="button"><span class="exp-rnum">04 · RETAINED</span><span class="exp-rt">Fractional Executive</span></button>
+      </div>
+      <div class="exp-stage">
+        <div class="exp-spanel on">
+          <div class="exp-simg">
+            <picture>
+              <source srcset="/assets/img/practice-prequal.webp" type="image/webp">
+              <img src="/assets/img/practice-prequal.jpg" alt="" style="object-position:center 45%;">
+            </picture>
+          </div>
+          <div class="exp-sbody">
+            <div class="exp-sphase">01 · QUALIFY</div>
+            <div class="exp-stitle">Pre-Qualification</div>
+            <p class="exp-sdesc">Prepare, implement, and capture the technical qualifications that gate the federal market — FedRAMP, SOC 2, and the broader body of federal regulatory requirements — delivered on ClauseAtlas, the first compliance platform purpose-built for government regulation.</p>
+            <div class="exp-stags"><span>FedRAMP</span><span>SOC 2</span><span>NIST 800-171/53</span><span>CMMC</span></div>
+            <a class="exp-slink" href="/practice/#pre-qualification">Full practice details →</a>
+          </div>
+        </div>
+        <div class="exp-spanel">
+          <div class="exp-simg">
+            <picture>
+              <source srcset="/assets/img/practice-capture.webp" type="image/webp">
+              <img src="/assets/img/practice-capture.jpg" alt="" loading="lazy" style="object-position:center 32%;">
+            </picture>
+          </div>
+          <div class="exp-sbody">
+            <div class="exp-sphase">02 · CAPTURE</div>
+            <div class="exp-stitle">Business Development</div>
+            <p class="exp-sdesc">Every phase of federal business development, strategy, and advisory — from standing up a government business unit, to capture management backed by industry relationships, to full proposal management: volume writing, color-team reviews, and oral presentations.</p>
+            <div class="exp-stags"><span>Federal BU build-out</span><span>Capture management</span><span>Proposal ops</span></div>
+            <a class="exp-slink" href="/practice/#business-development">Full practice details →</a>
+          </div>
+        </div>
+        <div class="exp-spanel">
+          <div class="exp-simg">
+            <picture>
+              <source srcset="/assets/img/practice-delivery.webp" type="image/webp">
+              <img src="/assets/img/practice-delivery.jpg" alt="" loading="lazy" style="object-position:center 45%;">
+            </picture>
+          </div>
+          <div class="exp-sbody">
+            <div class="exp-sphase">03 · DELIVER</div>
+            <div class="exp-stitle">Post-Award Operations</div>
+            <p class="exp-sdesc">Winning is the start, not the finish. We keep contract operations compliant, hold service delivery to the standard the government is grading you on, and help commercial teams internalize GovCon culture without losing momentum.</p>
+            <div class="exp-stags"><span>Compliance ops</span><span>Service quality</span><span>GovCon culture</span></div>
+            <a class="exp-slink" href="/practice/#post-award">Full practice details →</a>
+          </div>
+        </div>
+        <div class="exp-spanel">
+          <div class="exp-simg">
+            <picture>
+              <source srcset="/assets/img/practice-exec.webp" type="image/webp">
+              <img src="/assets/img/practice-exec.jpg" alt="" loading="lazy" style="object-position:center 60%;">
+            </picture>
+          </div>
+          <div class="exp-sbody">
+            <div class="exp-sphase">04 · RETAINED</div>
+            <div class="exp-stitle">Fractional Executive</div>
+            <p class="exp-sdesc">Senior security and compliance leadership, embedded a few days a month — executive judgment across all three phases without the cost of a full-time hire. The connective tissue that keeps qualification, capture, and delivery aligned.</p>
+            <div class="exp-stags"><span>Embedded CISO/CIO</span><span>Board reporting</span></div>
+            <a class="exp-slink" href="/practice/#fractional-executive">Full practice details →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO WE SERVE ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:88px 40px 20px;">
+    <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">WHO WE WORK WITH</div>
+    <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0 0 34px;">The companies the government needs next.</h2>
+    <div class="exp-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px;">
+        <div style="width:64px; height:64px; border-radius:50%; background:#f1ead9; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c05621" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 C14.3 4.6 15.4 7.4 15.4 10.4 L15.4 13.6 L8.6 13.6 L8.6 10.4 C8.6 7.4 9.7 4.6 12 2.8 Z"/><circle cx="12" cy="8.6" r="1.5"/><path d="M8.6 11.4 L5.6 14.6 L8.6 15.4"/><path d="M15.4 11.4 L18.4 14.6 L15.4 15.4"/><path d="M10.4 16.6 C10.4 18.4 11.2 19.8 12 21 C12.8 19.8 13.6 18.4 13.6 16.6"/></svg>
+        </div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Dual-use &amp; defense-tech</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Venture-backed companies with commercial traction and a defense or public-sector thesis, who need a credible federal path that satisfies both mission customers and investors.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px;">
+        <div style="width:64px; height:64px; border-radius:50%; background:#f1ead9; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c05621" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9.5 L12 4.5 L19.5 9.5 Z"/><path d="M6.5 9.5 V17.5 M17.5 9.5 V17.5"/><path d="M10.2 17.5 V12.8 H13.8 V17.5"/><path d="M4 17.5 H20 M3 20.2 H21"/></svg>
+        </div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Commercial firms entering gov</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Established businesses with proven products who see government as their next growth market — and need to learn its rules of engagement without stalling their core business.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:30px;">
+        <div style="width:64px; height:64px; border-radius:50%; background:#f1ead9; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c05621" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="14.5" width="3.4" height="5.5"/><rect x="10.3" y="11" width="3.4" height="9"/><rect x="15.6" y="7.5" width="3.4" height="12.5"/><path d="M5.5 9.8 L18.5 4.8 M18.5 4.8 L15.6 4.6 M18.5 4.8 L17.6 7.4"/></svg>
+        </div>
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Existing government contractors</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Firms already in the market who need to shore up compliance, sharpen capture and proposals, or keep post-award operations clean as they scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOR INVESTORS STRIP ============ -->
+  <section id="investors" class="exp-pad" style="max-width:1240px; margin:0 auto; padding:36px 40px 20px;">
+    <a href="/investors/" class="exp-card" style="display:block; background:#221710; color:#f7f2e9; border:1px solid #221710; border-radius:16px; padding:44px 48px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; right:0; width:280px; height:100%; background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size:40px 40px; pointer-events:none;"></div>
+      <div style="position:relative; display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap;">
+        <div style="max-width:64ch;">
+          <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#d9915f; margin-bottom:14px;">FOR VC &amp; PRIVATE INVESTMENT FIRMS</div>
+          <h2 style="font-size:clamp(23px,4.5vw,28px); font-weight:700; letter-spacing:-.01em; margin:0 0 12px; line-height:1.2;">Turn public-sector potential into portfolio-wide revenue.</h2>
+          <p style="font-size:15.5px; line-height:1.66; color:#c9b89d; margin:0;">One advisory partner across your portfolio — accelerating every company's path to federal contracts and exit criteria — plus pre-investment diligence on a target's real odds of winning government work.</p>
+        </div>
+        <span style="flex-shrink:0; font-size:15px; font-weight:700; color:#d9915f; border:2px solid #d9915f; padding:14px 26px; border-radius:8px;">For Investors →</span>
+      </div>
+    </a>
+  </section>
+
+
+  <!-- ============ CTA ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:80px 40px;">
+    <div class="exp-cta-box" style="background:#c05621; border-radius:18px; padding:64px 56px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:52px 52px; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <h2 style="font-size:clamp(29px,6vw,40px); font-weight:700; letter-spacing:-.02em; color:#fff; margin:0 auto 16px; max-width:20ch; line-height:1.1;">Ready to enter the public sector?</h2>
+        <p style="font-size:17px; line-height:1.6; color:#ffe9db; margin:0 auto 32px; max-width:52ch;">Start with a 30-minute strategy call. We'll map where you are on the route and what it takes to win.</p>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="display:inline-block; background:#fffdf8; color:#2b1d12; padding:17px 40px; border-radius:8px; font-size:15px; font-weight:700;">Schedule a strategy call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#221710; color:#c9b89d;">
+    <div class="exp-pad exp-grid-footer" style="max-width:1240px; margin:0 auto; padding:56px 40px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:22px; font-weight:800; letter-spacing:.04em; color:#f7f2e9;">Exprima</div>
+        <p style="font-size:13.5px; line-height:1.6; margin:14px 0 0; max-width:34ch;">Federal market advisory &amp; consulting. Qualification, capture, and post-award operations for companies entering the public sector.</p>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">PRACTICE</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/practice/#pre-qualification">Pre-Qualification</a><a href="/practice/#business-development">Business Development</a><a href="/practice/#post-award">Post-Award Operations</a><a href="/practice/#fractional-executive">Fractional Executive</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">FIRM</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/clauseatlas/">ClauseAtlas</a><a href="/investors/">For Investors</a><a href="/firm/">The Firm</a><a href="https://calendly.com/elliott-mattice-exprima/30min">Schedule a call</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">CONTACT</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="mailto:contact@exprima.io">contact@exprima.io</a><span>Alameda, California</span><a href="https://www.linkedin.com/company/exprima">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #3a2a1c;"><div class="exp-pad" style="max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:#8a7460;"><span>© 2026 EXPRIMA. ALL RIGHTS RESERVED. · <a href="/credits/">CREDITS</a></span><span>37.7652° N, 122.2416° W</span></div></div>
+  </footer>
+
+</div>
+<script>
+(function(){
+  /* Practice rail & stage */
+  var rb = document.getElementById('expRb');
+  if (rb){
+    var ritems = rb.querySelectorAll('.exp-ritem');
+    var spanels = rb.querySelectorAll('.exp-spanel');
+    var rcur = 0, rpaused = false;
+    var rReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var rgo = function(i){
+      for (var j = 0; j < ritems.length; j++){
+        ritems[j].classList.toggle('on', j === i);
+        spanels[j].classList.toggle('on', j === i);
+      }
+      var old = ritems[i].querySelector('.exp-rprog');
+      if (old) old.remove();
+      if (!rReduced){
+        var bar = document.createElement('span');
+        bar.className = 'exp-rprog';
+        ritems[i].insertBefore(bar, ritems[i].firstChild);
+      }
+      rcur = i;
+    };
+    for (var ri = 0; ri < ritems.length; ri++){
+      (function(idx){ ritems[idx].addEventListener('click', function(){ rgo(idx); }); })(ri);
+    }
+    rb.addEventListener('mouseenter', function(){ rpaused = true; });
+    rb.addEventListener('mouseleave', function(){ rpaused = false; });
+    rb.addEventListener('focusin', function(){ rpaused = true; });
+    rb.addEventListener('focusout', function(){ rpaused = false; });
+    if (!rReduced){
+      setInterval(function(){
+        if (!rpaused && !document.hidden) rgo((rcur + 1) % ritems.length);
+      }, 4200);
+    }
+  }
+
+  var counts = document.querySelectorAll('.exp-count');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (counts.length && 'IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        var el = e.target;
+        var target = parseFloat(el.getAttribute('data-target'));
+        var pre = el.getAttribute('data-prefix') || '';
+        var suf = el.getAttribute('data-suffix') || '';
+        var t0 = null;
+        var step = function(ts){
+          if (t0 === null) t0 = ts;
+          var p = Math.min((ts - t0) / 1400, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + Math.round(target * eased) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    for (var c = 0; c < counts.length; c++) io.observe(counts[c]);
+  }
+})();
+</script>
+</body>
+</html>

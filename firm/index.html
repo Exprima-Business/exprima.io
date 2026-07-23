@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Firm — Exprima</title>
+<meta name="description" content="Exprima was founded by Elliott Mattice after 25 years inside federal programs — 40+ federal authorizations delivered and $350M+ in portfolios managed across defense, healthcare, and federal contracting.">
+<meta property="og:title" content="The Firm — Exprima">
+<meta property="og:description" content="Twenty-five years inside federal programs, now focused on yours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.exprima.io/firm/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#f7f2e9; font-family:'Libre Franklin',sans-serif; color:#2b1d12; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { opacity:.75; }
+  .exp-nav-link { position:relative; }
+  .exp-nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#c05621; transition:width .25s ease; }
+  .exp-nav-link:hover::after { width:100%; }
+  .exp-nav-active { color:#c05621; }
+  .exp-nav-active::after { width:100%; }
+  .exp-cta { transition:transform .18s ease, box-shadow .18s ease; }
+  .exp-cta:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(192,86,33,.28); opacity:1; }
+  .exp-card { transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .exp-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px rgba(43,29,18,.12); border-color:#c9b89d; }
+  @keyframes expRise { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .exp-grid-split, .exp-grid-firm { grid-template-columns:1fr !important; }
+    .exp-portrait { max-width:420px; }
+  }
+  @media (max-width: 900px) {
+    .exp-nav-links { display:none !important; }
+  }
+  @media (max-width: 860px) {
+    .exp-grid-2, .exp-grid-3 { grid-template-columns:1fr !important; }
+    .exp-grid-stats { grid-template-columns:repeat(2,1fr) !important; }
+  }
+  @media (max-width: 720px) {
+    .exp-pad { padding-left:22px !important; padding-right:22px !important; }
+    .exp-grid-footer { grid-template-columns:1fr 1fr !important; }
+    .exp-cta-box { padding:44px 26px !important; }
+  }
+  @media (max-width: 480px) {
+    .exp-grid-footer { grid-template-columns:1fr !important; }
+    .exp-grid-stats { grid-template-columns:1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div style="max-width:100%; overflow-x:hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(247,242,233,.92); backdrop-filter:blur(10px); border-bottom:1px solid #e3dac9;">
+    <div class="exp-pad" style="max-width:1240px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 40px;">
+      <a href="/" style="display:flex; align-items:baseline; gap:16px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-size:23px; font-weight:800; letter-spacing:.04em;">Exprima</span>
+        <span style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460;">FEDERAL MARKET ADVISORY</span>
+      </a>
+      <div style="display:flex; gap:30px; align-items:center; font-size:14px; font-weight:600; color:#5c4a38;">
+        <div class="exp-nav-links" style="display:flex; gap:30px; align-items:center;">
+          <a class="exp-nav-link" href="/practice/">Practice</a>
+          <a class="exp-nav-link" href="/clauseatlas/">ClauseAtlas</a>
+          <a class="exp-nav-link" href="/investors/">For Investors</a>
+          <a class="exp-nav-link exp-nav-active" href="/firm/">The Firm</a>
+        </div>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="background:#2b1d12; color:#f7f2e9; padding:12px 24px; border-radius:8px; font-size:13.5px; font-weight:700;">Schedule a call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="exp-pad" style="max-width:1240px; margin:0 auto; padding:76px 40px 36px;">
+    <div style="max-width:840px; animation:expRise .6s ease both;">
+      <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#c05621; margin-bottom:26px;">THE FIRM</div>
+      <h1 style="font-size:clamp(34px,5.5vw,52px); line-height:1.06; font-weight:700; letter-spacing:-.02em; margin:0; text-wrap:pretty;">Twenty-five years inside federal programs, <span style="color:#c05621;">now focused on yours.</span></h1>
+      <p style="font-size:17px; line-height:1.68; color:#5c4a38; margin:26px 0 0; max-width:62ch;">Exprima exists because the federal market's rules are written in the government's language — and fluency only comes from working in it. We spent 25 years winning authorizations, running programs, and delivering for agencies across defense, homeland security, federal health, and civilian government. That fluency is what we bring to your side of the table.</p>
+    </div>
+  </header>
+
+  <!-- ============ FOUNDER ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:56px 40px 20px;">
+    <div class="exp-grid-firm" style="display:grid; grid-template-columns:0.8fr 1.2fr; gap:56px; align-items:start;">
+      <div class="exp-portrait" style="aspect-ratio:4/5; background:repeating-linear-gradient(135deg, #ece3d3, #ece3d3 12px, #f1ead9 12px, #f1ead9 24px); border:1px solid #e3dac9; border-radius:14px; display:flex; align-items:flex-end; padding:22px; position:sticky; top:96px;">
+        <span style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#a8977f; background:#fffdf8; padding:6px 10px; border-radius:6px;">founder portrait →</span>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:16px;">FOUNDER &amp; PRINCIPAL</div>
+        <h2 style="font-size:clamp(26px,5vw,32px); font-weight:700; letter-spacing:-.015em; margin:0 0 6px;">Elliott Mattice</h2>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:12px; color:#8a7460; margin-bottom:20px;">FEDERAL PROGRAM LEADERSHIP · CYBERSECURITY · GOVERNANCE</div>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 16px;">Elliott spent 25 years leading federal IT operations, cybersecurity programs, and business development across defense, healthcare, and federal contracting. Along the way he delivered more than 40 federal authorizations — FedRAMP, CMMC, and DoD ATOs — while managing program portfolios north of $350M.</p>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 16px;">That work took him through the exact processes Exprima's clients now face — authorization reviews, compliance audits, competitive procurements, and program oversight — from the practitioner's seat, over and over. Exprima's advice starts from what those reviews actually check, because we have prepared for them and passed them ourselves.</p>
+        <p style="font-size:16px; line-height:1.7; color:#5c4a38; margin:0 0 26px;">Exprima brings that pattern recognition to dual-use startups, commercial companies entering government, and the investors behind them — with delivery running on <a href="/clauseatlas/" style="color:#c05621; font-weight:600;">ClauseAtlas</a>, the compliance platform Exprima built for government regulation.</p>
+        <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:14.5px; font-weight:700; color:#c05621;">
+          <a class="exp-nav-link" href="https://www.linkedin.com/company/exprima">Exprima on LinkedIn ↗</a>
+          <a class="exp-nav-link" href="https://linkedin.com/in/elliottmattice">Elliott on LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRACK RECORD ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div class="exp-card" style="background:#221710; color:#f7f2e9; border:1px solid #221710; border-radius:16px; padding:44px 48px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; right:0; width:280px; height:100%; background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size:40px 40px; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#d9915f; margin-bottom:26px;">TRACK RECORD</div>
+        <div class="exp-grid-stats" style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px;">
+          <div style="border-top:1px solid #4a3826; padding-top:18px;">
+            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:34px; font-weight:800;">40+</div>
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#b9a893; letter-spacing:.06em; margin-top:6px;">FEDERAL AUTHORIZATIONS<br>FEDRAMP · CMMC · DOD ATO</div>
+          </div>
+          <div style="border-top:1px solid #4a3826; padding-top:18px;">
+            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:34px; font-weight:800;">$350M+</div>
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#b9a893; letter-spacing:.06em; margin-top:6px;">PORTFOLIO MANAGED<br>FEDERAL PROGRAMS</div>
+          </div>
+          <div style="border-top:1px solid #4a3826; padding-top:18px;">
+            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:34px; font-weight:800;">90%+</div>
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#b9a893; letter-spacing:.06em; margin-top:6px;">FIRST-TIME AUDIT PASS RATE<br>VS ~60% INDUSTRY AVERAGE</div>
+          </div>
+          <div style="border-top:1px solid #4a3826; padding-top:18px;">
+            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:34px; font-weight:800;">25 yrs</div>
+            <div style="font-family:'Spline Sans Mono',monospace; font-size:11px; color:#b9a893; letter-spacing:.06em; margin-top:6px;">FEDERAL PROGRAM LEADERSHIP<br>DEFENSE · HOMELAND · HEALTH · CIVILIAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHERE WE'VE WORKED ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:18px;">WHERE WE'VE WORKED</div>
+        <h2 style="font-size:clamp(27px,5vw,36px); line-height:1.14; font-weight:700; letter-spacing:-.015em; margin:0; text-wrap:pretty;">Across the federal landscape.</h2>
+      </div>
+      <div>
+        <p style="font-size:16.5px; line-height:1.72; color:#5c4a38; margin:0 0 22px;">The experience behind Exprima spans the programs of federal agencies and the contractors that serve them — across defense and national security, homeland security, federal health, and civilian government.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">TSA</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">DCSA</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">DoD components</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">Defense primes &amp; subcontractors</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">VA/DoD healthcare systems</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">Federal SaaS providers</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">Cybersecurity vendors</span>
+          <span style="font-size:13px; font-weight:600; color:#5c4a38; background:#f1ead9; padding:8px 16px; border-radius:100px;">Critical infrastructure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE OPERATE ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:14px;">HOW WE OPERATE</div>
+    <h2 style="font-size:clamp(27px,5vw,36px); font-weight:700; letter-spacing:-.015em; margin:0 0 34px;">The principles the practice runs on.</h2>
+    <div class="exp-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Own the whole arc</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Qualification, capture, and delivery fail at the handoffs. We run them as one engagement so nothing falls between the phases — and one owner is accountable for the outcome.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Build for the grader</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Compliance programs fail when they're built to the regulation's text instead of the assessor's checklist. We design controls and evidence around what the government actually verifies.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Platform-backed, judgment-led</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">ClauseAtlas does the exhaustive reading; experienced operators make the calls. Clients get machine coverage and executive judgment — not one pretending to be the other.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Results over deliverables</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Success is measured in authorizations granted, contracts won, and audits passed — not binders produced. Documents serve outcomes, never the reverse.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Early beats reactive</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">Federal requirements telegraph themselves months before they land. We position clients ahead of rule changes instead of scrambling after publication.</p>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:32px 30px;">
+        <h3 style="font-size:19px; font-weight:700; margin:0 0 10px;">Straight answers</h3>
+        <p style="font-size:14.5px; line-height:1.62; color:#5c4a38; margin:0;">If a federal path isn't real — the timeline, the cost, the odds — we say so before you spend on it. Clients and investors get the same clear-eyed read.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:72px 40px 20px;">
+    <div class="exp-grid-split" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#c05621; margin-bottom:18px;">CONTACT</div>
+        <h2 style="font-size:clamp(27px,5vw,36px); line-height:1.14; font-weight:700; letter-spacing:-.015em; margin:0;">Alameda, California. Serving nationwide.</h2>
+      </div>
+      <div class="exp-card" style="border:1px solid #e3dac9; background:#fffdf8; border-radius:14px; padding:34px 32px;">
+        <div style="display:flex; flex-direction:column; gap:14px; font-size:15.5px; color:#5c4a38;">
+          <div style="display:flex; gap:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.12em; color:#8a7460; min-width:72px; padding-top:3px;">EMAIL</span><a href="mailto:contact@exprima.io" style="color:#c05621; font-weight:600;">contact@exprima.io</a></div>
+          <div style="display:flex; gap:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.12em; color:#8a7460; min-width:72px; padding-top:3px;">PHONE</span><a href="tel:+12022624088" style="font-weight:600;">(202) 262-4088</a></div>
+          <div style="display:flex; gap:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.12em; color:#8a7460; min-width:72px; padding-top:3px;">MAIL</span><span>1311 Park St, #1164, Alameda, CA 94501</span></div>
+          <div style="display:flex; gap:16px;"><span style="font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.12em; color:#8a7460; min-width:72px; padding-top:3px;">CALL</span><a href="https://calendly.com/elliott-mattice-exprima/30min" style="color:#c05621; font-weight:600;">Schedule 30 minutes →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="exp-pad" style="max-width:1240px; margin:0 auto; padding:80px 40px;">
+    <div class="exp-cta-box" style="background:#c05621; border-radius:18px; padding:64px 56px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:52px 52px; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <h2 style="font-size:clamp(29px,6vw,40px); font-weight:700; letter-spacing:-.02em; color:#fff; margin:0 auto 16px; max-width:22ch; line-height:1.1;">Put inside knowledge on your side.</h2>
+        <p style="font-size:17px; line-height:1.6; color:#ffe9db; margin:0 auto 32px; max-width:52ch;">Start with a 30-minute strategy call. We'll map where you are on the route and what it takes to win.</p>
+        <a class="exp-cta" href="https://calendly.com/elliott-mattice-exprima/30min" style="display:inline-block; background:#fffdf8; color:#2b1d12; padding:17px 40px; border-radius:8px; font-size:15px; font-weight:700;">Schedule a strategy call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#221710; color:#c9b89d;">
+    <div class="exp-pad exp-grid-footer" style="max-width:1240px; margin:0 auto; padding:56px 40px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:22px; font-weight:800; letter-spacing:.04em; color:#f7f2e9;">Exprima</div>
+        <p style="font-size:13.5px; line-height:1.6; margin:14px 0 0; max-width:34ch;">Federal market advisory &amp; consulting. Qualification, capture, and post-award operations for companies entering the public sector.</p>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">PRACTICE</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/practice/#pre-qualification">Pre-Qualification</a><a href="/practice/#business-development">Business Development</a><a href="/practice/#post-award">Post-Award Operations</a><a href="/practice/#fractional-executive">Fractional Executive</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">FIRM</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="/clauseatlas/">ClauseAtlas</a><a href="/investors/">For Investors</a><a href="/firm/">The Firm</a><a href="https://calendly.com/elliott-mattice-exprima/30min">Schedule a call</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Spline Sans Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#8a7460; margin-bottom:14px;">CONTACT</div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+          <a href="mailto:contact@exprima.io">contact@exprima.io</a><span>Alameda, California</span><a href="https://www.linkedin.com/company/exprima">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #3a2a1c;"><div class="exp-pad" style="max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:#8a7460;"><span>© 2026 EXPRIMA. ALL RIGHTS RESERVED. · <a href="/credits/">CREDITS</a></span><span>37.7652° N, 122.2416° W</span></div></div>
+  </footer>
+
+</div>
+</body>
+</html>
